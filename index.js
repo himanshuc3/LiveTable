@@ -4,7 +4,7 @@ const app = express();
 
 
 app.get('/', (req,res) => {
-    res.send({pro: 'ject'})
+    res.send({pro: 'ject!'})
 });
 
 
