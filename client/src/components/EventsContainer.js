@@ -10,7 +10,7 @@ export default class EventsContainer extends Component {
         // }
 
         return (
-            <div class="events_container">
+            <div className="events_container">
                 <GridTiles eventsArray = {this.props.eventsArray}/>
             </div>
         );

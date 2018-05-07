@@ -29,6 +29,16 @@ class App extends Component {
           "eventName": "First Event",
           "startTime":11,
           "endTime": 12,
+        },
+        {
+          "eventName": "Second Event",
+          "startTime":1,
+          "endTime": 3,
+        },
+        {
+          "eventName": "Third Event",
+          "startTime":2,
+          "endTime": 3,
         }
       ],
       "TUESDAY":[
@@ -36,6 +46,16 @@ class App extends Component {
           "eventName": "First Event",
           "startTime":11,
           "endTime": 12,
+        },
+        {
+          "eventName": "Second Event",
+          "startTime":1,
+          "endTime": 3,
+        },
+        {
+          "eventName": "Third Event",
+          "startTime":2,
+          "endTime": 3,
         }
       ],
       "WEDNESDAY":[
@@ -43,6 +63,16 @@ class App extends Component {
           "eventName": "First Event",
           "startTime":11,
           "endTime": 12,
+        },
+        {
+          "eventName": "Second Event",
+          "startTime":1,
+          "endTime": 3,
+        },
+        {
+          "eventName": "Third Event",
+          "startTime":2,
+          "endTime": 3,
         }
       ],
       "THURSDAY":[
@@ -57,6 +87,16 @@ class App extends Component {
           "eventName": "First Event",
           "startTime":11,
           "endTime": 12,
+        },
+        {
+          "eventName": "Second Event",
+          "startTime":1,
+          "endTime": 3,
+        },
+        {
+          "eventName": "Third Event",
+          "startTime":2,
+          "endTime": 3,
         }
       ],
       "SATURDAY":[
@@ -78,7 +118,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1 style={{textAlign:"center"}}>Livetable</h1>
-        <div class="livetable">
+        <div className="livetable">
           <WeekContainer timetable = {this.state.timetable}/>
         </div>
       </div>
