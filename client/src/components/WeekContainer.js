@@ -7,10 +7,10 @@ export default class WeekContainer extends Component {
     render() {
 
         let daysOfWeek = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"];
-        let renderDayContainer = daysOfWeek.map(day => {
+        let renderDayContainer = daysOfWeek.map((day, index) => {
             return ( 
-                <div class="day_container">
-                    <div className="day">{day}</div>
+                <div key={index} className="day_container">
+                    <div className="day" style={{textAlign:"center"}}>{day}</div>
                     <EventsContainer eventsArray={this.props.timetable[day]} />
                     {/* {this.props.timetable["SUNDAY"]} */}
                 </div>
