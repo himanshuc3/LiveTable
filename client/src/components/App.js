@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import GridTiles from './GridTiles';
 import WeekContainer from './WeekContainer';
-import DayContainer from './DayContainer';
 require('../styles/main.css');
 
 class App extends Component {
