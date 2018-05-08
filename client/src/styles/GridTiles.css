@@ -1,0 +1,7 @@
+.grid{
+    background:yellowgreen;
+}
+
+.single_grid_tile{
+    z-index: 100;
+}

@@ -28,7 +28,7 @@ class App extends Component {
         {
           "eventName": "First Event",
           "startTime":11,
-          "endTime": 12,
+          "endTime": 17,
         }
       ],
       "TUESDAY":[
