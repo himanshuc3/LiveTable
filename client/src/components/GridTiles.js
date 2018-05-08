@@ -14,7 +14,7 @@ export default class GridTiles extends Component {
           i: index.toString(),
           x: 0,
           y: obj.startTime,
-          w: 2,
+          w: 1,
           h: obj.endTime - obj.startTime
         }
       });
@@ -30,9 +30,12 @@ export default class GridTiles extends Component {
           className="layout grid" 
           layout={layout} 
           cols={1} 
-          rowHeight={50} 
+          rows={24}
+          rowHeight={60}
           width={1200}
           verticalCompact = {false}
+          isDraggable = {false}
+          isResizable = {false}
         >
           {renderTile}
         </ReactGridLayout>

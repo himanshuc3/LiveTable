@@ -26,6 +26,16 @@ class App extends Component {
       ],
       "MONDAY":[
         {
+          "eventName": "Another Event",
+          "startTime":0,
+          "endTime": 1,
+        },
+        {
+          "eventName": "Another Event",
+          "startTime":0,
+          "endTime": 2,
+        },
+        {
           "eventName": "First Event",
           "startTime":11,
           "endTime": 17,

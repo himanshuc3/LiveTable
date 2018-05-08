@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import GridTiles from './GridTiles';
+require('../styles/events_container.css');
 
 export default class EventsContainer extends Component {
     render() {
