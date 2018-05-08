@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import WeekContainer from './WeekContainer';
+import FormModal from './FormModal';
 require('../styles/main.css');
 
 class App extends Component {
@@ -88,6 +89,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1 style={{textAlign:"center"}}>Livetable</h1>
+        <FormModal />
         <div class="livetable">
           <WeekContainer timetable = {this.state.timetable}/>
         </div>
