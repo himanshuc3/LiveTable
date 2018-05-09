@@ -19,6 +19,8 @@
   "dependencies": {
     "concurrently": "3.5.1",
     "express": "4.16.3",
-    "nodemon": "1.17.4"
+    "nodemon": "1.17.4",
+    "react-router": "4.2.0",
+    "react-router-dom": "4.2.2"
   }
 }
