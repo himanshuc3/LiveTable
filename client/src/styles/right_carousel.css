@@ -1,13 +1,31 @@
 .what_is_it_image,
 .why_use_it_image,
 .ease_of_use_image{
-    height: 30vh;
+    height: 40vh;
 }
 
 .right_carousel{
-    margin-top: 30%;
+    margin-top: 20%;
 }
 
 .carousel_slide{
-    text-align:center;
+    text-align:center;  
 }
+
+.carousel_slide h3{
+    font-family: 'Raleway';
+    color: rgba(0,0,0,0.5);
+    /* color: rgba(255,255,255,1); */
+    font-size: 2rem;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 10%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* .slider-control-centerleft button,
+.slider-control-centerright button{
+    background: none !important;
+
+} */

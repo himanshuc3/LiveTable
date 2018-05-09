@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Carousel from 'nuka-carousel';
-import whatIsIt from '../assets/images/standing-desk.svg';
-import whyUseIt from '../assets/images/robot.svg';
-import easeOfUse from '../assets/images/launch.svg';
+import whatIsIt from '../assets/images/what.svg';
+import whyUseIt from '../assets/images/why.svg';
+import easeOfUse from '../assets/images/ease.svg';
 require('../styles/right_carousel.css');
 
 export default class RightCarousel extends Component {
@@ -14,9 +14,19 @@ export default class RightCarousel extends Component {
                 className="right_carousel" 
                 dragging={true}
                 autoplay={true}
-                autoplayInterval={3000}
+                autoplayInterval={5000}
                 edgeEasing="easeInBounce"
                 speed={700}
+                renderBottomCenterControls={({ currentSlide }) => (
+                        <div></div>
+                )}
+                renderCenterRightControls={({ previousSlide }) => (
+                    <div></div>
+                )}
+                renderCenterLeftControls={({ previousSlide }) => (
+                    <div></div>
+                )}
+                wrapAround={true}
             >
                 <div className="carousel_slide">
                     <img className="what_is_it_image" src={whatIsIt} alt="What is it?"/>
