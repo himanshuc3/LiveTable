@@ -37,7 +37,9 @@
     width: 50%;
     float: right;
     height: 100vh;
-    background: yellow;
+    background: linear-gradient(270deg, #51b8d0, #d051b5, #dba73d);
+    background-size: 600% 600%;
+    animation: AnimationName 30s ease infinite;
 }
 
 .content{
@@ -147,6 +149,11 @@
 ================================
 */
 @keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+/* @keyframes AnimationName {
     0%{background-position:0% 11%}
     50%{background-position:100% 90%}
     100%{background-position:0% 11%}
@@ -166,7 +173,7 @@
         border-left-color: hotpink;
     }
     
-}
+} */
 
 /* .box_rooms h1{
     background: darkolivegreen;

@@ -1,0 +1,13 @@
+.what_is_it_image,
+.why_use_it_image,
+.ease_of_use_image{
+    height: 30vh;
+}
+
+.right_carousel{
+    margin-top: 30%;
+}
+
+.carousel_slide{
+    text-align:center;
+}

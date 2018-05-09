@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import RightCarousel from './RightCarousel';
 import logo from '../assets/images/logo.svg';
 import githubLogo from '../assets/images/github_logo.svg';
 import pusherLogo from '../assets/images/pusher_logo.svg';
@@ -38,6 +39,7 @@ export default class LandingPage extends Component {
                     </div>
                 </div>
                 <div className="right_container">
+                    <RightCarousel />
                 </div>
             </div>
         );
