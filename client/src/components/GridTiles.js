@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import GridLayout from 'react-grid-layout';
+// import GridLayout from 'react-grid-layout';
 import RGL, { WidthProvider } from "react-grid-layout";
 require('../../node_modules/react-grid-layout/css/styles.css');
 require('../../node_modules/react-resizable/css/styles.css');
@@ -13,9 +13,9 @@ export default class GridTiles extends Component {
         return {
           i: index.toString(),
           x: 0,
-          y: obj.startTime,
+          y: parseInt(obj.startTime),
           w: 1,
-          h: obj.endTime - obj.startTime
+          h: parseInt(obj.endTime) - parseInt(obj.startTime)
         }
       });
 
@@ -33,7 +33,7 @@ export default class GridTiles extends Component {
           rows={24}
           rowHeight={60}
           width={1200}
-          verticalCompact = {false}
+          compactType = {null}
           isDraggable = {false}
           isResizable = {false}
         >
