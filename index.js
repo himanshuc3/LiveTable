@@ -4,6 +4,9 @@ const app = express();
 
 
 if(process.env.NODE_ENV === 'production'){
+    //Serving static files(production assets)
+    app.use(express.static('client/build'));
+
     //Express will serve up the index.html file
     //if it doesn't recognize the file
     const path = require('path');
