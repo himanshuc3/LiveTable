@@ -1,3 +1,28 @@
+/*
+================================
+= imports
+================================
+*/
+/*
+================================
+= Font color variables
+================================
+*/
+/*
+================================
+= Theme background
+================================
+*/
+/*
+================================
+= Size variables
+================================
+*/
+/*
+================================
+= SCSS
+================================
+*/
 * {
   box-sizing: border-box; }
 
@@ -8,8 +33,15 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 1em; }
+  .landing_page .left_container, .landing_page .right_container {
+    width: 50%;
+    height: 100vh;
+    float: left; }
+  .landing_page .right_container {
+    background: tomato; }
 
 .app_name {
+  color: black;
   font-family: 'Fugaz One';
   letter-spacing: 1px;
   font-size: 1.3em;
@@ -19,40 +51,25 @@
   padding-left: 5%;
   font-weight: bold; }
 
-.left_container {
-  width: 50%;
-  float: left;
-  height: 100vh;
-  /* background: darksalmon; */ }
-
-.right_container {
-  width: 50%;
-  float: right;
-  height: 100vh;
-  background: tomato;
-  /* background:white; */ }
-
 .content {
   /* background: tan; */
   margin-top: 15%; }
-
-.content h1 {
-  /* background: skyblue; */
-  padding-left: 20%;
-  font-family: 'Oranienbaum';
-  letter-spacing: 1px;
-  font-size: 4em;
-  margin-bottom: 3%; }
-
-.content p {
-  /* background: chocolate; */
-  font-family: 'Roboto Condensed';
-  color: grey;
-  width: 65%;
-  word-spacing: .4em;
-  line-height: 1.5;
-  font-size: 1.3em;
-  margin-left: 21%; }
+  .content h1 {
+    /* background: skyblue; */
+    padding-left: 20%;
+    font-family: 'Oranienbaum';
+    letter-spacing: 1px;
+    font-size: 4em;
+    margin-bottom: 3%; }
+  .content p {
+    /* background: chocolate; */
+    font-family: 'Roboto Condensed';
+    color: grey;
+    width: 65%;
+    word-spacing: .4em;
+    line-height: 1.5;
+    font-size: 1.3em;
+    margin-left: 21%; }
 
 .box_container {
   /* background: gold; */ }
@@ -141,7 +158,7 @@
 
 /* Mobile version */
 @media only screen and (max-width: 920px) {
-  .left_container,
+  .left_container, .landing_page .right_container,
   .right_container {
     float: none;
     width: 100%; }
@@ -201,7 +218,7 @@
     font-size: 4em; }
   .content p {
     display: none; }
-  .left_container {
+  .left_container, .landing_page .right_container {
     height: 60vh;
     position: relative; }
   .made_by_container {

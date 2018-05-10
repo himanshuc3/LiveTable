@@ -1,0 +1,30 @@
+// This is a partial file which does not get converted to css
+// because it doesn't need to. Variables are imported in other 
+// files and hence not need to get converted to get css.
+// This helps in decreasing file size.
+
+/*
+================================
+= Font color variables
+================================
+*/
+
+$font-highlight-color: black;
+$font-fade-color: grey;
+
+/*
+================================
+= Theme background
+================================
+*/
+
+$theme-background: white;
+
+
+/*
+================================
+= Size variables
+================================
+*/
+
+$half-width: 50%;

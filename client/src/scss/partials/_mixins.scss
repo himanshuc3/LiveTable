@@ -1,0 +1,35 @@
+// Mixins are kind of like functions.
+// We can pass arguments into it and 
+// reuse it wherever we want by importing it.
+
+@mixin soft-normalize{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@mixin full-viewport-size{
+    width: 100vw;
+    height: 100vh;
+}
+
+@mixin apply-margin($top: 0, $bottom: 0, $left: 0, $right: 0){
+    margin-top: $top;
+    margin-bottom: $bottom;
+    margin-left: $left;
+    margin-right: $right;
+}
+
+@mixin apply-padding($top: 0, $bottom: 0, $left: 0, $right: 0){
+    padding-top: $top;
+    padding-bottom: $bottom;
+    padding-left: $left;
+    padding-right: $right;
+}
+
+@mixin half-container-props($width, $height, $float){
+    width: $width;
+    height: $height;
+    float: $float;
+
+}

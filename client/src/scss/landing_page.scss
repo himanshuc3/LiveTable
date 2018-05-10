@@ -1,14 +1,36 @@
+/*
+================================
+= imports
+================================
+*/
+
+@import './partials/variables';
+@import './partials/mixins';
+
+/*
+================================
+= SCSS
+================================
+*/
 *{
     box-sizing: border-box;
 }
 
 .landing_page{
-    background-color:white;
-    width: 100vw;
-    height: 100vh;
+    background-color:$theme-background;
+    @include full-viewport-size;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 1em;
+
+    .left_container{
+        @include half-container-props($half-width, 100vh, left);
+    }
+
+    .right_container{
+        @extend .left_container;
+        background: rgb(255, 99, 71);
+    }
 }
 
 .nav_container{
@@ -17,6 +39,7 @@
 
 
 .app_name{
+    color: $font-highlight-color;
     font-family: 'Fugaz One';
     letter-spacing: 1px;
     font-size: 1.3em;
@@ -27,53 +50,39 @@
     font-weight: bold;
 }
 
-.left_container{
-    width: 50%;
-    float: left;
-    height: 100vh;
-    /* background: darksalmon; */
-}
 
-.right_container{
-    width: 50%;
-    float: right;
-    height: 100vh;
-    background: rgb(255, 99, 71);
-    /* background:white; */
-}
 
 .content{
     /* background: tan; */
     margin-top: 15%;
-}
 
-.content h1{
-    /* background: skyblue; */
-    padding-left: 20%;
-    font-family: 'Oranienbaum';
-    letter-spacing: 1px;
-    font-size: 4em;
-    margin-bottom: 3%;
-}
+    h1{
+        /* background: skyblue; */
+        padding-left: 20%;
+        font-family: 'Oranienbaum';
+        letter-spacing: 1px;
+        font-size: 4em;
+        margin-bottom: 3%;
+    }
 
-.content p{
-    /* background: chocolate; */
-    font-family: 'Roboto Condensed';
-    color: grey;
-    width: 65%;
-    word-spacing: .4em;
-    line-height: 1.5;
-    font-size: 1.3em;
-    margin-left: 21%;
+    p{
+        /* background: chocolate; */
+        font-family: 'Roboto Condensed';
+        color: $font-fade-color;
+        width: 65%;
+        word-spacing: .4em;
+        line-height: 1.5;
+        font-size: 1.3em;
+        margin-left: 21%;
+    }
 }
-
 .box_container{
     /* background: gold; */
 }
 
 .box_rooms{
     font-family: 'Roboto Condensed';
-    color: grey;
+    color: $font-fade-color;
     position: relative;
     padding-top: 1%;
     padding-bottom: 1%;
@@ -134,11 +143,11 @@
     bottom:1%;
     left: 10%;
     font-family: 'Oranienbaum';
-    color: grey;
+    color: $font-fade-color;
 }
 
 .made_by_container span{
-    color: black;
+    color: $font-highlight-color;
     text-decoration: underline;
     text-decoration-color: red;
 }
