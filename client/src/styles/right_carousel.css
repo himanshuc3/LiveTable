@@ -1,92 +1,68 @@
-.carousel_images{
-    height: 40vh;
-}
+.carousel_images {
+  height: 40vh; }
 
-.right_carousel{
-    margin-top: 15%;
-}
+.right_carousel {
+  margin-top: 15%; }
 
-.carousel_slide{
-    text-align:center;  
-}
+.carousel_slide {
+  text-align: center; }
 
-.carousel_slide h3{
-    font-family: 'Raleway';
-    color: rgba(0,0,0,0.5);
-    /* color: rgba(255,255,255,1); */
-    font-size: 2em;
-    width: 60%;
-    margin: 0 auto;
-    margin-top: 10%;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+.carousel_slide h3 {
+  font-family: 'Raleway';
+  color: rgba(0, 0, 0, 0.5);
+  /* color: rgba(255,255,255,1); */
+  font-size: 2em;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 10%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
-.carousel_controls{
-    display:none;
-}
+.carousel_controls {
+  display: none; }
 
 /*
 ================================
 = Media Queries
 ================================
 */
-@media only screen and (max-width: 1200px){
-    .right_carousel{
-        margin-top: 25%;
-    }
-}
-@media only screen and (max-width: 1100px){
-    .right_carousel{
-        margin-top: 25%;
-    }
-    .carousel_slide h3{
-        width: 70%;
-    }
-}
+@media only screen and (max-width: 1200px) {
+  .right_carousel {
+    margin-top: 25%; } }
 
-@media only screen and (max-width: 980px){
-    .right_carousel{
-        margin-top: 30%;
-    }
-    .carousel_slide h3{
-        width: 75%;
-    }
-}
+@media only screen and (max-width: 1100px) {
+  .right_carousel {
+    margin-top: 25%; }
+  .carousel_slide h3 {
+    width: 70%; } }
+
+@media only screen and (max-width: 980px) {
+  .right_carousel {
+    margin-top: 30%; }
+  .carousel_slide h3 {
+    width: 75%; } }
 
 /* Mobile version */
-@media only screen and (max-width: 920px){
-    .right_carousel{
-        margin-top: 0;
-        padding-top: 10%;
-    }
-    .carousel_images{
-        height: 60vh;
-    }
-}
+@media only screen and (max-width: 920px) {
+  .right_carousel {
+    margin-top: 0;
+    padding-top: 10%; }
+  .carousel_images {
+    height: 60vh; } }
 
-@media only screen and (max-width: 720px){
-    
-    .carousel_images{
-        height: 50vh;
-    }
-    .carousel_slide h3{
-        font-size: 1.5em;
-        width: 70%;
-    }
+@media only screen and (max-width: 720px) {
+  .carousel_images {
+    height: 50vh; }
+  .carousel_slide h3 {
+    font-size: 1.5em;
+    width: 70%; } }
 
-}
-
-@media only screen and (max-width: 440px){
-    .right_carousel{
-        padding-top: 30%;
-        padding-bottom: 0;
-        margin-bottom: 0;
-    }
-    .carousel_images{
-        height: 30vh;
-    }
-    .carousel_slide h3{
-        width: 90%;
-    }
-}
+@media only screen and (max-width: 440px) {
+  .right_carousel {
+    padding-top: 30%;
+    padding-bottom: 0;
+    margin-bottom: 0; }
+  .carousel_images {
+    height: 30vh; }
+  .carousel_slide h3 {
+    width: 90%; } }

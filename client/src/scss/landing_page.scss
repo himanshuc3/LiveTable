@@ -1,0 +1,306 @@
+*{
+    box-sizing: border-box;
+}
+
+.landing_page{
+    background-color:white;
+    width: 100vw;
+    height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 1em;
+}
+
+.nav_container{
+    //  background-color: yellowgreen; 
+}
+
+
+.app_name{
+    font-family: 'Fugaz One';
+    letter-spacing: 1px;
+    font-size: 1.3em;
+    /* background:red; */
+    margin-top: 0;
+    padding-top: 3%;
+    padding-left: 5%;
+    font-weight: bold;
+}
+
+.left_container{
+    width: 50%;
+    float: left;
+    height: 100vh;
+    /* background: darksalmon; */
+}
+
+.right_container{
+    width: 50%;
+    float: right;
+    height: 100vh;
+    background: rgb(255, 99, 71);
+    /* background:white; */
+}
+
+.content{
+    /* background: tan; */
+    margin-top: 15%;
+}
+
+.content h1{
+    /* background: skyblue; */
+    padding-left: 20%;
+    font-family: 'Oranienbaum';
+    letter-spacing: 1px;
+    font-size: 4em;
+    margin-bottom: 3%;
+}
+
+.content p{
+    /* background: chocolate; */
+    font-family: 'Roboto Condensed';
+    color: grey;
+    width: 65%;
+    word-spacing: .4em;
+    line-height: 1.5;
+    font-size: 1.3em;
+    margin-left: 21%;
+}
+
+.box_container{
+    /* background: gold; */
+}
+
+.box_rooms{
+    font-family: 'Roboto Condensed';
+    color: grey;
+    position: relative;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background: white;
+    margin-left: 20%;
+    width:85%;
+    border: 2px solid rgba(155,155,155,0.2);
+    border-left: 5px solid yellow;
+    padding-left: 10%;
+    z-index: 2;
+    box-shadow: 47px 76px 300px 1px rgba(0,0,0,0.63);
+    /* background: linear-gradient(304deg, #5cb09a, #77c9ca, #d2c561, #cb7bcc);; */
+    /* background-size: 800% 800%; */
+    /* animation: AnimationName 15s ease infinite; */
+    /* animation: border-color 3s infinite alternate-reverse; */
+}
+
+.project_references_container{
+    margin-top: 3%;
+    /* background: greenyellow; */
+}
+
+.project_references_inner{
+    padding-left: 20%;
+}
+
+.project_references_inner svg{
+    height: 40px;
+    margin-right: 40px;
+}
+
+#brown{
+    transition: fill 1s;
+}
+
+.github_logo:hover #brown{
+    transition: fill 1s;
+    fill: rgba(0,0,0,1);
+}
+
+/* Pusher logo fill class */
+.st2{
+    fill: rgba(48,13,79,0.3);
+}
+
+.st2{
+    transition: fill 1s;
+}
+
+.pusher_logo:hover .st2{
+    transition: fill 1s;
+    fill: rgba(48,13,79,1);
+}
+
+.made_by_container{
+    position: absolute;
+    /* background: yellow; */
+    bottom:1%;
+    left: 10%;
+    font-family: 'Oranienbaum';
+    color: grey;
+}
+
+.made_by_container span{
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+
+/*
+================================
+= Media Queries
+================================
+*/
+
+@media only screen and (max-width: 1200px){
+    .landing_page{
+        font-size: 0.9em;
+    }
+    .content{
+        margin-top: 25%;
+    }
+
+}
+
+@media only screen and (max-width: 1100px){
+    .landing_page{
+        font-size: 0.8em;
+    }
+}
+@media only screen and (max-width: 980px){
+    .landing_page{
+        font-size: 0.75em;
+    }
+    .content{
+        margin-top: 30%;
+    }
+
+}
+
+/* Mobile version */
+@media only screen and (max-width: 920px){
+    .left_container,
+    .right_container{
+        float:none;
+        width:100%;
+    }
+    .app_name{
+        text-align:center;
+    }
+    .landing_page{
+        font-size: 1.2em;
+    }
+    .content h1{
+        padding-left: 0;
+        text-align: center;
+    }
+    .content{
+        margin-top: 3%;
+    }
+    .app_name{
+        color: brown;
+    }
+    .content p{
+        margin: 0 auto;
+        margin-bottom: 5%;
+        text-align:center;
+    }
+    .box_rooms{
+        margin: 0 auto;
+        width: 90%;
+        border-left: none;
+        padding-left: 0;
+        text-align: center;
+        font-size: 1.2em;
+        background: linear-gradient(270deg, #b6d46d, #6dc6d4, #6d8fd4, #af6dd4);
+        background-size: 800% 800%;
+        animation: box-gradient 15s ease infinite;
+        color: white;
+    }
+    .project_references_container{
+        text-align:center;
+    }
+    .project_references_inner{
+        display: inline-block;
+        padding-left: 0;
+        margin: 0 auto;
+    }
+    .made_by_container{
+        left:25%;
+    }
+}
+
+@media only screen and (max-width: 720px){
+    .content p{
+        width:80%;
+    }
+}
+
+@media only screen and (max-width: 560px){
+    .landing_page{
+        font-size: 1em;
+    }
+    .content{
+        margin-top: 20%;
+    }
+    .content h1{
+        margin-bottom: 5%;
+    }
+    .project_references_container{
+        margin-top: 5%;
+    }
+}
+
+@media only screen and (max-width: 440px){
+    .landing_page{
+        font-size: 0.8em;
+    }
+    .content h1{
+        font-size: 4em;
+    }
+    .content p{
+        display:none;
+    }
+    .left_container{
+        height:60vh;
+        position: relative;
+    }
+    .made_by_container{
+        bottom: 0;
+    }
+}
+
+/*
+================================
+= Animations/keyframes
+================================
+*/
+
+@-webkit-keyframes box-gradient {
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+}
+
+/* @keyframes AnimationName {
+    0%{background-position:0% 11%}
+    50%{background-position:100% 90%}
+    100%{background-position:0% 11%}
+}
+
+@keyframes border-color{
+    25%{
+        border-left-color: salmon;
+    }
+    50%{
+        border-left-color: chartreuse;
+    }
+    75%{
+        border-left-color: royalblue;
+    }
+    100%{
+        border-left-color: hotpink;
+    }
+    
+} */
+
+/* .box_rooms h1{
+    background: darkolivegreen;
+} */

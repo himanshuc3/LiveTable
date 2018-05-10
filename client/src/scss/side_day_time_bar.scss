@@ -1,0 +1,13 @@
+.side_time_container{
+    width: 100px;
+    float: left;
+}
+
+.side_time_container p:nth-child(1){
+    padding-top: 15px;
+}
+
+.side_time_container p{
+    height: 60px;
+    font-size: 10px;
+}

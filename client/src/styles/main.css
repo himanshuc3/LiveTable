@@ -1,8 +1,7 @@
-*{
-    box-sizing: border-box;
-}
-body{
-    background: red;
-    font-family: 'Roboto';
-    font-style: normal;
-}
+* {
+  box-sizing: border-box; }
+
+body {
+  background: red;
+  font-family: 'Roboto';
+  font-style: normal; }
