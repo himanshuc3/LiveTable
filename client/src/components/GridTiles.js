@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import GridLayout from 'react-grid-layout';
 import RGL, { WidthProvider } from "react-grid-layout";
 require('../../node_modules/react-grid-layout/css/styles.css');
 require('../../node_modules/react-resizable/css/styles.css');

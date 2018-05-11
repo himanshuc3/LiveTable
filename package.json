@@ -17,10 +17,13 @@
   "author": "Himanshu chhabra <himichhabra14@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "1.18.2",
     "concurrently": "3.5.1",
+    "cors": "2.8.4",
     "express": "4.16.3",
     "nodemon": "1.17.4",
     "path": "0.12.7",
+    "pusher": "2.0.0",
     "react-router": "4.2.0",
     "react-router-dom": "4.2.2"
   }

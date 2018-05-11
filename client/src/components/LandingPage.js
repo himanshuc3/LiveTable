@@ -1,11 +1,13 @@
+
 import React, { Component } from 'react';
 import RightCarousel from './RightCarousel';
-import logo from '../assets/images/logo.svg';
-import githubLogo from '../assets/images/github_logo.svg';
-import pusherLogo from '../assets/images/pusher_logo.svg';
+// import logo from '../assets/images/logo.svg';
+// import githubLogo from '../assets/images/github_logo.svg';
+// import pusherLogo from '../assets/images/pusher_logo.svg';
 require('../styles/landing_page.css');
 
 export default class LandingPage extends Component {
+
 
     render() {
 
@@ -35,7 +37,13 @@ export default class LandingPage extends Component {
                         </div>
                     </div>
                     <div className="made_by_container">
-                        <p>Made with 💜 & 🙌  by <span>Himanshu</span> and <span>Rishabh</span></p>
+                        <p>
+                            Made with <span role="img" aria-label="heart">💜</span> 
+                            & 
+                            <span role="img" aria-label="hands">🙌</span> 
+                            by 
+                            <span>Himanshu</span> and <span>Rishabh</span>
+                        </p>
                     </div>
                 </div>
                 <div className="right_container">

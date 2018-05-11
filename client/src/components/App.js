@@ -1,7 +1,14 @@
+//Probably going to uplift state and therefore maybe also 
+//these components to routing.
+import axios from 'axios';
+import Pusher from 'pusher-js';
+// -------------------------------------------------------
+
 import React, { Component } from 'react';
 import WeekContainer from './WeekContainer';
 import FormModal from './FormModal';
 require('../styles/main.css');
+
 
 class App extends Component {
 

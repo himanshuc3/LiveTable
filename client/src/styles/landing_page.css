@@ -33,11 +33,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 1em; }
-  .landing_page .left_container, .landing_page .right_container {
+  .landing_page .left_container {
     width: 50%;
     height: 100vh;
     float: left; }
   .landing_page .right_container {
+    width: 50%;
+    height: 100vh;
+    float: right;
     background: tomato; }
 
 .app_name {
@@ -158,7 +161,7 @@
 
 /* Mobile version */
 @media only screen and (max-width: 920px) {
-  .left_container, .landing_page .right_container,
+  .left_container,
   .right_container {
     float: none;
     width: 100%; }
@@ -218,7 +221,7 @@
     font-size: 4em; }
   .content p {
     display: none; }
-  .left_container, .landing_page .right_container {
+  .left_container {
     height: 60vh;
     position: relative; }
   .made_by_container {

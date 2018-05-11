@@ -28,7 +28,7 @@
     }
 
     .right_container{
-        @extend .left_container;
+        @include half-container-props($half-width, 100vh, right);
         background: rgb(255, 99, 71);
     }
 }
