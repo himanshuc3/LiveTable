@@ -21,7 +21,9 @@ export default class GridTiles extends Component {
 
       let renderTile = this.props.eventsArray.map((obj,index) => {
         return (
-          <div key={index} className="single_grid_tile" style={{backgroundColor:"tan"}}>{obj.eventName}</div>
+          <div key={index} className="single_grid_tile" >
+            <h3>{obj.eventName}</h3>
+          </div>
         );
       });
 
@@ -36,6 +38,7 @@ export default class GridTiles extends Component {
           compactType = {null}
           isDraggable = {false}
           isResizable = {false}
+          margin = {[0,5]}
         >
           {renderTile}
         </ReactGridLayout>

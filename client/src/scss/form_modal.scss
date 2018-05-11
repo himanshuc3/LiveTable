@@ -9,12 +9,14 @@
 } */
 .form_button_container{
     position:absolute;
-    top:40px;
-    right: 40px;
+    top:5%;
+    right: 5%;
 }
 
 .modal{
     z-index: 200;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .rodal-dialog{
@@ -22,21 +24,56 @@
 }
 
 .modal header{
-    background: #8A98B8;
+    background: #D6D9DF;
     width: 100%;
     padding: 2% 0;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
 }
-.modal_heading{
+
+
+.modal_heading h3{
     text-align:center;
     width: 90%;
-    background: red;
+    background: #C7C9CE;
     margin: 0 auto;
     color: white;
     font-weight: bold;
-    border: 2px solid #4A5374;
-    background: #4A5374;
+    border: 3px solid #C7C9CE;
     border-radius: 3px;
     padding: 2% 0;
+}
+
+.form_add_button{
+    font-family: 'Nunito';
+    font-weight: 600;
+    border: 2px solid #D4D7DD;
+    background: white;
+    color: #5F5F5F;
+    padding: 5% 15%;
+    border-radius: 5px;
+}
+
+.modal_event_logo{
+    width:30px;
+    padding-right: 10px;
+}
+
+.form input{
+    width: 100%;
+    line-height: 3.5em;
+    background: #D6D9DF;
+    border: none;
+    padding-left: 5%;
+    font-style: italic;
+    border-bottom: 1px solid #D6D9DF;
+}
+
+.form button{
+    width: 100%;
+    line-height: 3.5em;
+    background: #4CAF50;
+    color: white;
+    font-weight: 300;
+    border:none;
 }

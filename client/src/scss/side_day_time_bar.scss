@@ -1,6 +1,8 @@
 .side_time_container{
-    width: 100px;
+    width: 10%;;
     float: left;
+    // background: orange;
+    color: #D6D9DF;
 }
 
 .side_time_container p:nth-child(1){
@@ -9,5 +11,10 @@
 
 .side_time_container p{
     height: 60px;
-    font-size: 10px;
+    font-size: 0.8em;
+}
+
+.side_time_container p{
+    text-align: right;
+    padding-right: 15%;
 }

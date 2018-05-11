@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import WeekContainer from './WeekContainer';
 // import FormModal from './FormModal';
+import SideDayTimeBar from './SideDayTimeBar'
 import FormModal from './FormModal';
-import { Provider } from 'react-redux';
+// import { Provider } from 'react-redux';
 // We'll create this in step 3.
-import store from '../store/store';
+// import store from '../store/store';
 require('../styles/main.css');
 
 class App extends Component {
@@ -90,48 +91,35 @@ class App extends Component {
     };
   }
 
-  handleEventAdd (event_name, start_time, end_time, day_name) {
-    console.log('Inside handleEventAdd: ', event_name, start_time, end_time, day_name);
-    let newEvent = {
-      "eventName": event_name,
-      "startTime": start_time,
-      "endTime": end_time,
-    }
+  handleEventAdd (obj) {
+    console.log(obj);
 
-    let currentTimetableArray;
-    if(day_name === "TUESDAY") {
-      currentTimetableArray = this.state.timetable.TUESDAY;
-    }else if(day_name === "MONDAY") {
-      currentTimetableArray = this.state.timetable.MONDAY;
-    }else if(day_name === "WEDNESDAY") {
-      currentTimetableArray = this.state.timetable.WEDNESDAY;
-    }else if(day_name === "THURSDAY") {
-      currentTimetableArray = this.state.timetable.THURSDAY;
-    }else if(day_name === "FRIDAY") {
-      currentTimetableArray = this.state.timetable.FRIDAY;
-    }else if(day_name === "SATURDAY") {
-      currentTimetableArray = this.state.timetable.SATURDAY;
-    }else if(day_name === "SUNDAY") {
-      currentTimetableArray = this.state.timetable.SUNDAY;
-    }
+    let dayAddedTo = {...this.state.timetable}; //copy of array
+    dayAddedTo[obj.day].push({
+      "eventName": obj.event,
+      "startTime": +obj.start,
+      "endTime": +obj.end 
+    });
+    this.setState({
+      timetable: dayAddedTo
+    });
 
-    currentTimetableArray.push(newEvent);
-    this.setState({timetable: this.state.timetable});
 
   }
 
   render() {
     return (
 
-      <Provider store={store}>
+      // <Provider store={store}>
         <div className="App">
-          <h1 style={{textAlign:"center"}}>Livetable</h1>
+          <h1 className="livetable_heading">Livetable</h1>
           <FormModal onEventAdd={this.handleEventAdd.bind(this)} />
+          <SideDayTimeBar />
           <div className="livetable">
             <WeekContainer timetable = {this.state.timetable}/>
           </div>
         </div>
-      </Provider>
+      // </Provider>
     );
   }
 }
