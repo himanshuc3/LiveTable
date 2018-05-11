@@ -8,7 +8,7 @@ export default class WeekContainer extends Component {
     render() {
 
         let daysOfWeek = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"];
-        let renderDayContainer = daysOfWeek.map(day => {
+        let renderDayContainer = daysOfWeek.map((day, index) => {
             return ( 
                     <div key={index} className="day_container">
                         <div className="day">{day}</div>

@@ -35,7 +35,12 @@ export default class LandingPage extends Component {
                         </div>
                     </div>
                     <div className="made_by_container">
-                        <p>Made with <span role="img" aria-label="emojis">💜 & 🙌</span>  by <span>Himanshu</span> and <span>Rishabh</span></p>
+                        <p>Made with 
+                        <span role="img" aria-label="emojis"> 💜 </span>
+                        & 
+                        <span role="img" aria-label="emojis"> 🙌 </span>
+                        by  
+                        <span className="name"> Himanshu</span> and <span className="name">Rishabh</span></p>
                     </div>
                 </div>
                 <div className="right_container">

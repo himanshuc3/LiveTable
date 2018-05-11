@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import WeekContainer from './WeekContainer';
 // import FormModal from './FormModal';
-import CreateScheduleForm from './CreateScheduleForm';
+import FormModal from './FormModal';
+import { Provider } from 'react-redux';
+// We'll create this in step 3.
+import store from '../store/store';
 require('../styles/main.css');
 
 class App extends Component {
@@ -120,13 +123,15 @@ class App extends Component {
   render() {
     return (
 
-      <div className="App">
-        <h1 style={{textAlign:"center"}}>Livetable</h1>
-        <CreateScheduleForm onEventAdd={this.handleEventAdd.bind(this)} />
-        <div className="livetable">
-          <WeekContainer timetable = {this.state.timetable}/>
+      <Provider store={store}>
+        <div className="App">
+          <h1 style={{textAlign:"center"}}>Livetable</h1>
+          <FormModal onEventAdd={this.handleEventAdd.bind(this)} />
+          <div className="livetable">
+            <WeekContainer timetable = {this.state.timetable}/>
+          </div>
         </div>
-      </div>
+      </Provider>
     );
   }
 }

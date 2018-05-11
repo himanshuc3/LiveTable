@@ -6,6 +6,32 @@
 /* .form_button_container{
     z-index: 200;
 } */
-.overlay_container {
-  z-index: 200;
-  background: green; }
+.form_button_container {
+  position: absolute;
+  top: 40px;
+  right: 40px; }
+
+.modal {
+  z-index: 200; }
+
+.rodal-dialog {
+  padding: 0; }
+
+.modal header {
+  background: #8A98B8;
+  width: 100%;
+  padding: 2% 0;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px; }
+
+.modal_heading {
+  text-align: center;
+  width: 90%;
+  background: red;
+  margin: 0 auto;
+  color: white;
+  font-weight: bold;
+  border: 2px solid #4A5374;
+  background: #4A5374;
+  border-radius: 3px;
+  padding: 2% 0; }
