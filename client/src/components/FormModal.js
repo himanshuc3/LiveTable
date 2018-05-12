@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Rodal from 'rodal';
 import addEventLogo from '../assets/images/addevent.svg';
-// import { LocalForm, Control } from 'react-redux-form';
+import axios from 'axios';
 // include styles
 import 'rodal/lib/rodal.css';
 require('../styles/form_modal.css');
@@ -22,6 +22,7 @@ export default class FormModal extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+
     handleChange(e) {
         
         let newState = {};
@@ -31,6 +32,9 @@ export default class FormModal extends Component {
 
     handleSubmit(e){
         e.preventDefault();
+        // console.log("Submit triggered");
+        // let data = this.state;
+        // axios.post('http://localhost:5000/addEvent', data);
         this.props.onEventAdd(this.state);
         this.hide();
     }

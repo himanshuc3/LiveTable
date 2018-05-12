@@ -27,9 +27,11 @@ const pusher = new Pusher({
     encrypted: true
 });
 
-app.post('/', function(req,res){
-    pusher.trigger('presence-counter', 'online-presence');
-    res.send({});
+
+app.post('/addEvent', (req,res)=>{
+    const eventDetails = req.body;
+    pusher.trigger('livetable', 'addEvent', eventDetails);
+    res.send(eventDetails);
 });
 
 

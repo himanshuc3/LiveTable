@@ -1,12 +1,10 @@
 //Probably going to uplift state and therefore maybe also 
 //these components to routing.
-import axios from 'axios';
 import Pusher from 'pusher-js';
+import axios from 'axios';
 // -------------------------------------------------------
-
 import React, { Component } from 'react';
 import WeekContainer from './WeekContainer';
-import Pusher from 'pusher-js';
 import SideDayTimeBar from './SideDayTimeBar'
 import FormModal from './FormModal';
 require('../styles/main.css');
@@ -95,6 +93,17 @@ class App extends Component {
     };
   }
 
+  componentDidMount(){
+    Pusher.logToConsole = true;
+    const pusher = new Pusher('bd15491c4e703db76122', {
+      cluster: 'ap2',
+      encrypted: true
+    });
+    const channel = pusher.subscribe('timetable');
+    channel.bind('addEvent', data =>{
+      this.handleEventAdd(data);
+    });
+  }
   handleEventAdd (obj) {
     console.log(obj);
 
@@ -107,14 +116,6 @@ class App extends Component {
     this.setState({
       timetable: dayAddedTo
     });
-  }
-
-  componentDidMount(){
-    const pusher = new Pusher('YOUR_PUSHER_APP_KEY', {
-      cluster: 'YOUR_CLUSTER',
-      encrypted: true
-    });
-    const channel = pusher.subscribe('chat');
   }
 
   render() {

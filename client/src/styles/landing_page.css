@@ -133,7 +133,7 @@
   font-family: 'Oranienbaum';
   color: grey; }
 
-.made_by_container span {
+.made_by_container span.name {
   color: black;
   text-decoration: underline;
   text-decoration-color: red; }
