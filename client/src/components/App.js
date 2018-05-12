@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import WeekContainer from './WeekContainer';
-// import FormModal from './FormModal';
+import Pusher from 'pusher-js';
 import SideDayTimeBar from './SideDayTimeBar'
 import FormModal from './FormModal';
-// import { Provider } from 'react-redux';
-// We'll create this in step 3.
-// import store from '../store/store';
 require('../styles/main.css');
 
 class App extends Component {
@@ -103,8 +100,14 @@ class App extends Component {
     this.setState({
       timetable: dayAddedTo
     });
+  }
 
-
+  componentDidMount(){
+    const pusher = new Pusher('YOUR_PUSHER_APP_KEY', {
+      cluster: 'YOUR_CLUSTER',
+      encrypted: true
+    });
+    const channel = pusher.subscribe('chat');
   }
 
   render() {
