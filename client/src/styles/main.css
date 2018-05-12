@@ -1,7 +1,15 @@
 * {
   box-sizing: border-box; }
 
-body {
-  background: red;
-  font-family: 'Roboto';
+.App {
+  font-family: 'Nunito';
+  font-weight: 400;
   font-style: normal; }
+
+.livetable_heading {
+  font-size: 2em;
+  padding-left: 10%; }
+
+.livetable {
+  width: 90%;
+  overflow-y: scroll; }
