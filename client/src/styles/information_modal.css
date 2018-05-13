@@ -1,0 +1,25 @@
+.information_container {
+  display: inline-block;
+  font-family: 'Oranienbaum'; }
+  .information_container img {
+    margin-left: 20px;
+    width: 20px; }
+
+.information_modal {
+  background: #FE6246; }
+
+.information_modal h2 {
+  text-align: center;
+  padding-top: 20%;
+  font-size: 2em; }
+
+.information_modal p {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto; }
+
+@media only screen and (max-width: 920px) {
+  .information_container {
+    position: absolute;
+    top: 20px;
+    right: 20px; } }
