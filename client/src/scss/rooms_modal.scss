@@ -1,0 +1,46 @@
+.rooms_modal{
+    text-align:center;
+    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+    h3{
+        color: black;
+        font-size: 2em;
+    }
+
+    h4{
+        background: green;
+        width:60%;
+        margin: 0 auto;
+        padding: 10px 0;
+        color: white;
+        background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+        border-radius: 20px;
+    }
+
+    .link_to_timetable{
+        text-decoration: none;
+    }
+
+}
+
+.rooms_container{
+    position: relative;
+    img{
+        width: 30px;
+        position: absolute;
+        right: 30px;
+    }
+
+    h3{
+        cursor: zoom-in;
+    }
+
+}
+
+@media only screen and (max-width: 920px){
+    .rooms_container{
+        img{
+            display: none;
+        }
+    }
+
+}

@@ -3,7 +3,8 @@
   font-family: 'Oranienbaum'; }
   .information_container img {
     margin-left: 20px;
-    width: 20px; }
+    width: 20px;
+    cursor: zoom-in; }
 
 .information_modal {
   background: #FE6246; }

@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import RightCarousel from './RightCarousel';
 import InformationModal from './InformationModal';
+import RoomsModal from './RoomsModal';
 // import logo from '../assets/images/logo.svg';
 // import githubLogo from '../assets/images/github_logo.svg';
 // import pusherLogo from '../assets/images/pusher_logo.svg';
@@ -27,7 +28,8 @@ export default class LandingPage extends Component {
                     </div>
                     <div className="box_container">
                         <div className="box_rooms">
-                            <h3>Rooms</h3>
+                            {/* <h3>Rooms</h3> */}
+                            <RoomsModal />
                         </div>
                     </div>
                     {/* Need a way to use inlineSVG to import all of svg content into the file 
