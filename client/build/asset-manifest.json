@@ -1,12 +1,15 @@
 {
-  "main.css": "static/css/main.6fef5cbe.css",
-  "main.css.map": "static/css/main.6fef5cbe.css.map",
-  "main.js": "static/js/main.27ee14d4.js",
-  "main.js.map": "static/js/main.27ee14d4.js.map",
+  "main.css": "static/css/main.7d93fa01.css",
+  "main.css.map": "static/css/main.7d93fa01.css.map",
+  "main.js": "static/js/main.e8263840.js",
+  "main.js.map": "static/js/main.e8263840.js.map",
+  "static/media/addevent.svg": "static/media/addevent.4404b23e.svg",
+  "static/media/block.svg": "static/media/block.94ab4444.svg",
   "static/media/ease.svg": "static/media/ease.22294dca.svg",
-  "static/media/github_logo.svg": "static/media/github_logo.89f7f492.svg",
-  "static/media/logo.svg": "static/media/logo.9fbf0865.svg",
-  "static/media/pusher_logo.svg": "static/media/pusher_logo.d43ecf02.svg",
+  "static/media/info.svg": "static/media/info.6da33994.svg",
+  "static/media/live_table.svg": "static/media/live_table.fa506fda.svg",
+  "static/media/plus.svg": "static/media/plus.fd4e8664.svg",
+  "static/media/right-arrow.svg": "static/media/right-arrow.279196e3.svg",
   "static/media/what.svg": "static/media/what.a430fe78.svg",
   "static/media/why.svg": "static/media/why.cf918196.svg"
 }
