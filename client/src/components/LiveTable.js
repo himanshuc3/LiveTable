@@ -1,7 +1,6 @@
 import BigCalendar from 'react-big-calendar';
-import moment from 'moment';
 import React, { Component } from 'react';
-import events from './events';
+import moment from 'moment';
 require('react-big-calendar/lib/css/react-big-calendar.css');
 require('../styles/live_table.css');
 
@@ -10,20 +9,31 @@ require('../styles/live_table.css');
 BigCalendar.momentLocalizer(moment); // or globalizeLocalizer
 
 export default class LiveTable extends Component{
+
  
     render(){
     
-        let allViews = Object.keys(BigCalendar.Views).map(k => BigCalendar.Views[k])
 
         return(
-            
-            <div>
+            <div className="livetable_container">
                 <BigCalendar
-                    events={events}
-                    views={allViews}
-                    step={60}
-                    showMultiDayTimes
-                    defaultDate={new Date(2015, 3, 1)}
+                    selectable
+                    events={this.props.events}
+                    defaultView="week"
+                    toolbar = {false}
+                    views={{
+                        day: true,
+                        week: true
+                      }}
+                    scrollToTime={new Date(1970, 1, 1, 6)}
+                    onSelectEvent={event => alert(event.title)}
+                    onSelectSlot={slotInfo =>
+                        alert(
+                        `selected slot: \n\nstart ${slotInfo.start.toLocaleString()} ` +
+                            `\nend: ${slotInfo.end.toLocaleString()}` +
+                            `\naction: ${slotInfo.action}`
+                        )
+                    }
                     className="live_table"
                 />
             </div>

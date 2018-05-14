@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Rodal from 'rodal';
+import Cleave from 'cleave.js/react';
 import addEventLogo from '../assets/images/addevent.svg';
 import axios from 'axios';
 // include styles
@@ -20,23 +21,51 @@ export default class FormModal extends Component {
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.validateTime = this.validateTime.bind(this);
     }
 
 
     handleChange(e) {
         
         let newState = {};
-        newState[e.target.name] = e.target.value;
+        if(e.target.name === "event" || e.target.name === "day"){
+            newState[e.target.name] = e.target.value;
+        }else{
+            newState[e.target.name] = e.target.rawValue;
+        }
         this.setState(newState);
+    }
+
+    validateTime(){
+        let {start} = this.state;
+        let {end} = this.state;
+        if(+start.substring(0,2)<24 &&
+            +start.substring(2)<60 &&
+            +end.substring(0,2)<24 &&
+            +end.substring(2)<60 &&
+            start !== end){
+                if(+start.substring(0,2)<+end.substring(0,2)){
+                    return true;
+                }else{
+                    this.setState({
+                        start: end,
+                        end: start
+                    });
+                    return true;
+                }
+            }
+        return false;
     }
 
     handleSubmit(e){
         e.preventDefault();
-        // console.log("Submit triggered");
+        console.log("Submit triggered:", this.state);
+        let isTimeValid = this.validateTime();
+        console.log(isTimeValid);
         // let data = this.state;
         // axios.post('http://localhost:5000/addEvent', data);
         this.props.onEventAdd(this.state);
-        this.hide();
+        // this.hide();
     }
 
     show() {
@@ -68,10 +97,34 @@ export default class FormModal extends Component {
                         </header>
                         <div className="form_container">
                             <form className="form" onSubmit={this.handleSubmit} >
-                                <input type="text" name="event" onChange={this.handleChange} placeholder="Event name - Collaborate band"/>
-                                <input type="text" name="day" onChange={this.handleChange} placeholder="Day - Monday"/>
-                                <input type="text" name="start" onChange={this.handleChange} placeholder="Start time - 5"/>
-                                <input type="text"  name="end" onChange={this.handleChange} placeholder="End Time - 16"/>
+                                <input type="text" name="event" onChange={this.handleChange} placeholder="Event name - Collaborate band!"/>
+                                <select className="day_select" name="day" onChange={this.handleChange}>
+                                    <option value="SUNDAY">Sunday</option>
+                                    <option value="MONDAY">Monday</option>
+                                    <option value="TUESDAY">TUESDAY</option>
+                                    <option value="WEDNESDAY">WEDNESDAY</option>
+                                    <option value="THURSDAY">THURSDAY</option>
+                                    <option value="FRIDAY">FRIDAY</option>
+                                    <option value="SATURDAY">SATURDAY</option>
+                                </select> 
+                                <Cleave 
+                                    placeholder="Start time - 06:00" 
+                                    name="start"
+                                    options={{
+                                        blocks: [2,2], 
+                                        delimiter: ':', 
+                                        numericOnly: true
+                                    }}
+                                    onChange={this.handleChange}/>
+                                <Cleave 
+                                    placeholder="Start time - 16:00" 
+                                    name="end"
+                                    options={{
+                                        blocks: [2,2], 
+                                        delimiter: ':', 
+                                        numericOnly: true
+                                    }}
+                                    onChange={this.handleChange}/>
                                 <button type="submit">SUBMIT</button>
                             </form>
                         </div>

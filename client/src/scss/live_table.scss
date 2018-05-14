@@ -1,5 +1,47 @@
 .live_table{
-    background: green;
+    // background: green;
     width: 80%;
     margin-left: 10%;
+    height:600px;
+    position: absolute;
+    bottom:0;
+    right: 0;
+    // background: yellowgreen;
+
+    .rbc-time-view{
+        border: none;
+        border: none;
+    }
+    .rbc-time-header-cell{
+        color: #DEDEE2;
+    }
+    .rbc-header{
+        padding: 20px 0;
+        // border-left: 1px solid white;
+        border: none;
+    }
+    .rbc-time-content{
+        border: none;
+    }
+    .rbc-timeslot-group{
+        border: none;
+    }
+    .rbc-day-bg{
+        border: none;
+    }
+    .rbc-label{
+        border: none !important;
+    }
+    .rbc-events-container{
+        border: none;
+    }
+    .rbc-time-column{
+        color: #DEDEE2;
+    }
+    .rbc-event{
+        background: #FB6571;
+        border-radius: 0;
+        border: none;
+        // width: 110% !important;
+    }
 }
