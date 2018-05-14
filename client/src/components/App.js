@@ -35,15 +35,15 @@ class App extends Component {
   }
 
   componentDidMount(){
-    // Pusher.logToConsole = true;
-    // const pusher = new Pusher('bd15491c4e703db76122', {
-    //   cluster: 'ap2',
-    //   encrypted: true
-    // });
-    // const channel = pusher.subscribe('timetable');
-    // channel.bind('addEvent', data =>{
-    //   this.handleEventAdd(data);
-    // });
+    Pusher.logToConsole = true;
+    const pusher = new Pusher('bd15491c4e703db76122', {
+      cluster: 'ap2',
+      encrypted: true
+    });
+    const channel = pusher.subscribe('timetable');
+    channel.bind('addEvent', data =>{
+      this.handleEventAdd(data);
+    });
   }
   handleEventAdd (obj) {
     let dayAddedTo = {...this.state.events}; //copy of events object state
@@ -67,48 +67,17 @@ class App extends Component {
         start2 = obj.start.substring(2),
         end1 = obj.end.substring(0,2),
         end2 = obj.end.substring(2);    
-    dayAddedTo["sunday"].push({
-      id: this.state.numberOfEvents + 1,
-      name: "Blocked",
-      startTime: moment(`2018-02-23T${start1}:${start2}:00`),
-      endTime: moment(`2018-02-23T${end1}:${end2}:00`)
-    });
-    dayAddedTo["monday"].push({
-      id: this.state.numberOfEvents + 1,
-      name: "Blocked",
-      startTime: moment(`2018-02-23T${start1}:${start2}:00`),
-      endTime: moment(`2018-02-23T${end1}:${end2}:00`)
-    });
-    dayAddedTo["tuesday"].push({
-      id: this.state.numberOfEvents + 1,
-      name: "Blocked",
-      startTime: moment(`2018-02-23T${start1}:${start2}:00`),
-      endTime: moment(`2018-02-23T${end1}:${end2}:00`)
-    });
-    dayAddedTo["wednesday"].push({
-      id: this.state.numberOfEvents + 1,
-      name: "Blocked",
-      startTime: moment(`2018-02-23T${start1}:${start2}:00`),
-      endTime: moment(`2018-02-23T${end1}:${end2}:00`)
-    });
-    dayAddedTo["thursday"].push({
-      id: this.state.numberOfEvents + 1,
-      name: "Blocked",
-      startTime: moment(`2018-02-23T${start1}:${start2}:00`),
-      endTime: moment(`2018-02-23T${end1}:${end2}:00`)
-    });
-    dayAddedTo["friday"].push({
-      id: this.state.numberOfEvents + 1,
-      name: "Blocked",
-      startTime: moment(`2018-02-23T${start1}:${start2}:00`),
-      endTime: moment(`2018-02-23T${end1}:${end2}:00`)
-    });
-    dayAddedTo["saturday"].push({
-      id: this.state.numberOfEvents + 1,
-      name: "Blocked",
-      startTime: moment(`2018-02-23T${start1}:${start2}:00`),
-      endTime: moment(`2018-02-23T${end1}:${end2}:00`)
-    });
+    let arrOfDays = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+    
+    for(let day of arrOfDays){
+      dayAddedTo[day].push({
+        id: this.state.numberOfEvents + 1,
+        name: "Blocked",
+        startTime: moment(`2018-02-23T${start1}:${start2}:00`),
+        endTime: moment(`2018-02-23T${end1}:${end2}:00`)
+      });
+    }
+    
 
     this.setState({
       events: dayAddedTo,

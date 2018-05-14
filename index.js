@@ -18,7 +18,7 @@ app.use(cors());
 // ------------------------------------------------------
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 const pusher = new Pusher({
     appId: '519915',
     key: 'bd15491c4e703db76122',
@@ -27,11 +27,14 @@ const pusher = new Pusher({
     encrypted: true
 });
 
+app.get('/',(req,res)=>{
+    res.send({one:"two"});
+});
 
 app.post('/addEvent', (req,res)=>{
     const eventDetails = req.body;
-    pusher.trigger('livetable', 'addEvent', eventDetails);
-    res.send(eventDetails);
+    pusher.trigger('timetable', 'addEvent', eventDetails);
+    res.send(req.body);
 });
 
 

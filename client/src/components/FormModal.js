@@ -62,11 +62,8 @@ export default class FormModal extends Component {
         e.preventDefault();
         console.log("Submit triggered:", this.state);
         let isTimeValid = this.validateTime();
-        console.log(isTimeValid);
-        // let data = this.state;
-        // axios.post('http://localhost:5000/addEvent', data);
-        this.props.onEventAdd(this.state);
-        // this.hide();
+        axios.post('addEvent', this.state);
+        this.hide();
     }
 
     show() {
