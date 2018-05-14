@@ -27,9 +27,6 @@ const pusher = new Pusher({
     encrypted: true
 });
 
-app.get('/',(req,res)=>{
-    res.send({one:"two"});
-});
 
 app.post('/addEvent', (req,res)=>{
     const eventDetails = req.body;
