@@ -1,31 +1,12 @@
-.live_table {
-  width: 80%;
-  margin-left: 10%;
-  height: 600px;
+.livetable_container {
+  background: green;
+  overflow-y: visible; }
+
+.styles_time_table_wrapper__1-rtp {
   position: absolute;
   bottom: 0;
-  right: 0; }
-  .live_table .rbc-time-view {
-    border: none;
-    border: none; }
-  .live_table .rbc-time-header-cell {
-    color: #DEDEE2; }
-  .live_table .rbc-header {
-    padding: 20px 0;
-    border: none; }
-  .live_table .rbc-time-content {
-    border: none; }
-  .live_table .rbc-timeslot-group {
-    border: none; }
-  .live_table .rbc-day-bg {
-    border: none; }
-  .live_table .rbc-label {
-    border: none !important; }
-  .live_table .rbc-events-container {
-    border: none; }
-  .live_table .rbc-time-column {
-    color: #DEDEE2; }
-  .live_table .rbc-event {
-    background: #FB6571;
-    border-radius: 0;
-    border: none; }
+  right: 0;
+  height: 90%;
+  overflow-y: scroll;
+  width: 80%;
+  margin-left: 10%; }

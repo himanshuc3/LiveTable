@@ -1,38 +1,16 @@
 .side_bar {
-    width: 15%;
+    width: 20%;
     float: left; 
     height: 100vh;
     // background: red; 
   
     .side_bar_svg{
-        width: 90%;
+        width: 80%;
         margin-top: 10%;
         margin-left: 10%;
     }
   }
 
-  .side_bar_items{
-      list-style: none;
-    //   background: red;
-      text-align: center;
-      padding-left: 0;
-      width: 90%;
-      margin: 0 auto;
-      margin-top: 30%;
-      color: white;
-      
-      li{
-        margin-bottom: 30px;
-        // background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
-        padding: 20px 0;
-        border-radius: 30px;
-
-        &:nth-child(odd){
-            background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
-        }
-        &:nth-child(even){
-            background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
-        }
-      }
+  
   }
   

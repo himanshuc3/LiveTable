@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import Rodal from 'rodal';
 import Cleave from 'cleave.js/react';
-import addEventLogo from '../assets/images/addevent.svg';
-import axios from 'axios';
-import addButton from '../assets/images/plus.svg';
+import blockButton from '../assets/images/block.svg';
 // include styles
 import 'rodal/lib/rodal.css';
-require('../styles/form_modal.css');
+require('../styles/block_modal.css');
+require('../styles/block_modal.css');
 
 
 export default class FormModal extends Component {
@@ -60,13 +59,10 @@ export default class FormModal extends Component {
 
     handleSubmit(e){
         e.preventDefault();
-        console.log("Submit triggered:", this.state);
         let isTimeValid = this.validateTime();
         console.log(isTimeValid);
-        // let data = this.state;
-        // axios.post('http://localhost:5000/addEvent', data);
-        this.props.onEventAdd(this.state);
-        // this.hide();
+        this.props.onBlock(this.state);
+        this.hide();
     }
 
     show() {
@@ -80,9 +76,10 @@ export default class FormModal extends Component {
 
     render() {
         return (
-    
-                <div className="form_button_container">
-                    <img src={addButton} className="add_button" onClick={this.show.bind(this)} />
+                    
+                <div className="block_button_container">
+                    {/* <img className="add_event_logo" src={addEventLogo} /> */}
+                    <img src={blockButton} className="block_button" onClick={this.show.bind(this)} />
                     <Rodal 
                         visible={this.state.visible} 
                         onClose={this.hide.bind(this)}
@@ -91,20 +88,10 @@ export default class FormModal extends Component {
                         className="modal"
                     >
                         <header className="modal_heading">
-                                <h3><img src={addEventLogo} className="modal_event_logo" />AN EVENT</h3>
+                                <h3>BLOCK TIMEZONE:</h3>
                         </header>
                         <div className="form_container">
                             <form className="form" onSubmit={this.handleSubmit} >
-                                <input type="text" name="event" onChange={this.handleChange} placeholder="Event name - Collaborate band!"/>
-                                <select className="day_select" name="day" onChange={this.handleChange}>
-                                    <option value="SUNDAY">Sunday</option>
-                                    <option value="MONDAY">Monday</option>
-                                    <option value="TUESDAY">TUESDAY</option>
-                                    <option value="WEDNESDAY">WEDNESDAY</option>
-                                    <option value="THURSDAY">THURSDAY</option>
-                                    <option value="FRIDAY">FRIDAY</option>
-                                    <option value="SATURDAY">SATURDAY</option>
-                                </select> 
                                 <Cleave 
                                     placeholder="Start time - 06:00" 
                                     name="start"

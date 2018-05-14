@@ -15,28 +15,22 @@ class App extends Component {
 
   constructor(props){
     super(props);
-    let events = [
-      {
-        id: 0,
-        title: 'Today',
-        start: new Date(new Date().setHours(new Date().getHours() - 3)),
-        end: new Date(new Date().setHours(new Date().getHours() + 3)),
-      },
-      {
-        id: 1,
-        title: 'One more',
-        start: new Date(new Date().setHours(new Date().getHours() - 2)),
-        end: new Date(new Date().setHours(new Date().getHours() + 3)),
-      },
-      {
-        id: 2,
-        title: 'One more',
-        start: new Date(new Date().setHours(new Date().getHours() - 1)),
-        end: new Date(new Date().setHours(new Date().getHours() + 3)),
-      },
-    ];
+    let events = {
+      sunday:[
+
+      ],
+      monday: [
+      ],
+      tuesday: [
+      ],
+      wednesday: [],
+      thursday: [],
+      friday: [],
+      saturday: []
+    };
     this.state = {
-          events: events
+          events: events,
+          numberOfEvents: 0
     };
   }
 
@@ -52,21 +46,75 @@ class App extends Component {
     // });
   }
   handleEventAdd (obj) {
+    let dayAddedTo = {...this.state.events}; //copy of events object state
+    dayAddedTo[obj["day"].toLowerCase()].push({
+      id: this.state.numberOfEvents + 1,
+      name: obj.event,
+      startTime: moment(`2018-02-23T${obj.start.substring(0,2)}:${obj.start.substring(2)}:00`),
+      endTime: moment(`2018-02-23T${obj.end.substring(0,2)}:${obj.end.substring(2)}:00`)
+    });
+
+    this.setState({
+      events: dayAddedTo,
+      numberOfEvents: this.state.numberOfEvents + 1
+    });
+  }
+
+  blockEvent(obj){
     console.log(obj);
+    let dayAddedTo = {...this.state.events};
+    let start1 = obj.start.substring(0,2),
+        start2 = obj.start.substring(2),
+        end1 = obj.end.substring(0,2),
+        end2 = obj.end.substring(2);    
+    dayAddedTo["sunday"].push({
+      id: this.state.numberOfEvents + 1,
+      name: "Blocked",
+      startTime: moment(`2018-02-23T${start1}:${start2}:00`),
+      endTime: moment(`2018-02-23T${end1}:${end2}:00`)
+    });
+    dayAddedTo["monday"].push({
+      id: this.state.numberOfEvents + 1,
+      name: "Blocked",
+      startTime: moment(`2018-02-23T${start1}:${start2}:00`),
+      endTime: moment(`2018-02-23T${end1}:${end2}:00`)
+    });
+    dayAddedTo["tuesday"].push({
+      id: this.state.numberOfEvents + 1,
+      name: "Blocked",
+      startTime: moment(`2018-02-23T${start1}:${start2}:00`),
+      endTime: moment(`2018-02-23T${end1}:${end2}:00`)
+    });
+    dayAddedTo["wednesday"].push({
+      id: this.state.numberOfEvents + 1,
+      name: "Blocked",
+      startTime: moment(`2018-02-23T${start1}:${start2}:00`),
+      endTime: moment(`2018-02-23T${end1}:${end2}:00`)
+    });
+    dayAddedTo["thursday"].push({
+      id: this.state.numberOfEvents + 1,
+      name: "Blocked",
+      startTime: moment(`2018-02-23T${start1}:${start2}:00`),
+      endTime: moment(`2018-02-23T${end1}:${end2}:00`)
+    });
+    dayAddedTo["friday"].push({
+      id: this.state.numberOfEvents + 1,
+      name: "Blocked",
+      startTime: moment(`2018-02-23T${start1}:${start2}:00`),
+      endTime: moment(`2018-02-23T${end1}:${end2}:00`)
+    });
+    dayAddedTo["saturday"].push({
+      id: this.state.numberOfEvents + 1,
+      name: "Blocked",
+      startTime: moment(`2018-02-23T${start1}:${start2}:00`),
+      endTime: moment(`2018-02-23T${end1}:${end2}:00`)
+    });
 
-    console.log(moment().day("Sunday"));
+    this.setState({
+      events: dayAddedTo,
+      numberOfEvents: this.state.numberOfEvents + 1
+    });
 
-    // let dayAddedTo = [...this.state.events]; //copy of array
-    // dayAddedTo.push({
-    //   id: dayAddedTo.length,
-    //   title: obj.event,
-    //   start:,
-    //   end: 
-    // });
-
-    // this.setState({
-    //   events: dayAddedTo
-    // });
   }
 
   render() {
@@ -74,7 +122,7 @@ class App extends Component {
 
       // <Provider store={store}>
         <div className="App">
-          <SideBar />
+          <SideBar onBlock={this.blockEvent.bind(this)}/>
           <div className="heading_livetable">
             <h1 className="livetable_heading">Livetable</h1>
             <FormModal onEventAdd={this.handleEventAdd.bind(this)} />

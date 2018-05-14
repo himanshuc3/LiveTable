@@ -1,9 +1,9 @@
 .side_bar {
-  width: 15%;
+  width: 20%;
   float: left;
   height: 100vh; }
   .side_bar .side_bar_svg {
-    width: 90%;
+    width: 80%;
     margin-top: 10%;
     margin-left: 10%; }
 
@@ -11,15 +11,12 @@
   list-style: none;
   text-align: center;
   padding-left: 0;
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   margin-top: 30%;
   color: white; }
   .side_bar_items li {
-    margin-bottom: 30px;
-    padding: 20px 0;
-    border-radius: 30px; }
-    .side_bar_items li:nth-child(odd) {
-      background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%); }
-    .side_bar_items li:nth-child(even) {
-      background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%); }
+    margin-bottom: 10px;
+    padding: 10px 0;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%); }

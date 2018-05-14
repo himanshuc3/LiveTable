@@ -7,13 +7,12 @@
   font-style: normal; }
 
 .livetable_heading {
-  font-size: 2em;
-  padding-left: 10%; }
+  font-size: 2em; }
 
 .livetable {
   width: 90%;
   overflow-y: scroll; }
 
 .heading_livetable {
-  width: 85%;
+  width: 80%;
   float: right; }
