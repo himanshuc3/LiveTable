@@ -35,7 +35,6 @@ class App extends Component {
   }
 
   componentDidMount(){
-    Pusher.logToConsole = true;
     const pusher = new Pusher('bd15491c4e703db76122', {
       cluster: 'ap2',
       encrypted: true
@@ -44,7 +43,14 @@ class App extends Component {
     channel.bind('addEvent', data =>{
       this.handleEventAdd(data);
     });
+    channel.bind('peopleAdd', username =>{
+      console.log("inside peopleAdd channel bind");
+    });
+    channel.bind('blockEvent', data =>{
+      this.blockEvent(data);
+    });
   }
+
   handleEventAdd (obj) {
     let dayAddedTo = {...this.state.events}; //copy of events object state
     dayAddedTo[obj["day"].toLowerCase()].push({
@@ -91,9 +97,9 @@ class App extends Component {
 
       // <Provider store={store}>
         <div className="App">
-          <SideBar onBlock={this.blockEvent.bind(this)}/>
+          <SideBar username={this.state.username} onBlock={this.blockEvent.bind(this)}/>
           <div className="heading_livetable">
-            <h1 className="livetable_heading">Livetable</h1>
+            <h1 className="livetable_heading">Livetable {this.props.username}</h1>
             <FormModal onEventAdd={this.handleEventAdd.bind(this)} />
             <LiveTable events={this.state.events} />
           </div>

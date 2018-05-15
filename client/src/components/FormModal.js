@@ -62,7 +62,11 @@ export default class FormModal extends Component {
         e.preventDefault();
         console.log("Submit triggered:", this.state);
         let isTimeValid = this.validateTime();
-        axios.post('addEvent', this.state);
+        if(isTimeValid){
+            axios.post('/addEvent', this.state);
+        }else{
+            alert("Enter valid time");
+        }
         this.hide();
     }
 

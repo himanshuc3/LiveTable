@@ -34,6 +34,18 @@ app.post('/addEvent', (req,res)=>{
     res.send(req.body);
 });
 
+app.post('/blockEvent', (req,res)=>{
+    const eventDetails = req.body;
+    pusher.trigger('timetable', 'blockEvent', eventDetails);
+    res.send(req.body);
+});
+
+app.post('/people', (req,res)=>{
+    const username = req.body.username;
+    pusher.trigger('timetable', 'peopleAdd', username);
+    res.send(username);
+});
+
 
 if(process.env.NODE_ENV === 'production'){
     //Serving assets in production from buil directory

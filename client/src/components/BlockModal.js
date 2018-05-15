@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Rodal from 'rodal';
 import Cleave from 'cleave.js/react';
+import axios from 'axios';
 import blockButton from '../assets/images/block.svg';
 // include styles
 import 'rodal/lib/rodal.css';
@@ -60,8 +61,11 @@ export default class FormModal extends Component {
     handleSubmit(e){
         e.preventDefault();
         let isTimeValid = this.validateTime();
-        console.log(isTimeValid);
-        this.props.onBlock(this.state);
+        if(isTimeValid){
+            axios.post('/blockEvent', this.state);
+        }else{
+            alert("Enter valid time");
+        }
         this.hide();
     }
 

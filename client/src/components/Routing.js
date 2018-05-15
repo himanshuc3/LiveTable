@@ -3,8 +3,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import App from './App';
 import LandingPage from './LandingPage';
 
-export default class WeekContainer extends Component {
-
+export default class Routing extends Component {
 
     render() {
 
