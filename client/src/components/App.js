@@ -8,6 +8,9 @@ import React, { Component } from 'react';
 import FormModal from './FormModal';
 import LiveTable from './LiveTable';
 import SideBar from './SideBar';
+import SearchBox from './SearchBox'
+import logout from '../assets/images/logout.svg'
+import notification from '../assets/images/notification.svg'
 require('../styles/app.css');
 
 
@@ -98,9 +101,15 @@ class App extends Component {
       // <Provider store={store}>
         <div className="App">
           <SideBar username={this.state.username} onBlock={this.blockEvent.bind(this)}/>
-          <div className="heading_livetable">
-            <h1 className="livetable_heading">Livetable {this.props.username}</h1>
-            <FormModal onEventAdd={this.handleEventAdd.bind(this)} />
+          <div className="right_livetable_container">
+            <header className="calendar_header">
+              <SearchBox />
+              <div className="header_icons">
+                <img src={notification} alt="notification" />
+                <img src={logout} alt="Logout" />
+              </div>
+            </header>
+            {/* <FormModal onEventAdd={this.handleEventAdd.bind(this)} /> */}
             <LiveTable events={this.state.events} />
           </div>
         </div>

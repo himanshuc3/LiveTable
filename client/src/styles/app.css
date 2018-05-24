@@ -4,7 +4,8 @@
 .App {
   font-family: 'Nunito';
   font-weight: 400;
-  font-style: normal; }
+  font-style: normal;
+  width: 100vw; }
 
 .livetable_heading {
   font-size: 2em; }
@@ -13,6 +14,24 @@
   width: 90%;
   overflow-y: scroll; }
 
-.heading_livetable {
-  width: 80%;
+.right_livetable_container {
+  width: 95%;
   float: right; }
+  .right_livetable_container .calendar_header {
+    float: left;
+    border-bottom: 1px solid #EFEFF3;
+    width: 100%;
+    height: 5vw;
+    min-height: 72px; }
+
+.header_icons {
+  width: 18%;
+  height: 100%;
+  float: left; }
+
+.header_icons img {
+  display: inline-block;
+  vertical-align: baseline !important;
+  margin-left: 20%;
+  margin-top: 20px;
+  width: 25px; }
