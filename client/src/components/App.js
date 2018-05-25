@@ -57,8 +57,6 @@ class App extends Component {
       title: obj.event,
       start: new Date((new Date()).getFullYear(),(new Date()).getMonth(), parseInt(obj.date), parseInt(obj.start.substring(0,2)), parseInt(obj.start.substring(2))),
       end: new Date((new Date()).getFullYear(),(new Date()).getMonth(), parseInt(obj.date), parseInt(obj.end.substring(0,2)), parseInt(obj.end.substring(2))),
-      // startTime: moment(`2018-02-23T${obj.start.substring(0,2)}:${obj.start.substring(2)}:00`),
-      // endTime: moment(`2018-02-23T${obj.end.substring(0,2)}:${obj.end.substring(2)}:00`)
     });
 
     this.setState({
