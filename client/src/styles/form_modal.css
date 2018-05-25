@@ -1,16 +1,3 @@
-/* .form_open_button{
-    position:absolute;
-    top:40px;
-    right: 40px;
-} */
-/* .form_button_container{
-    z-index: 200;
-} */
-.form_button_container {
-  position: absolute;
-  top: 2%;
-  right: 2%; }
-
 .add_button {
   width: 40px; }
 

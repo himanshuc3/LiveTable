@@ -12,6 +12,7 @@
     "pusher-js": "4.2.2",
     "react": "^16.3.2",
     "react-big-calendar": "0.19.1",
+    "react-big-scheduler": "0.2.0",
     "react-dom": "^16.3.2",
     "react-grid-layout": "0.16.6",
     "react-redux": "5.0.7",

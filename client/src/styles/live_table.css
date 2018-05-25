@@ -1,12 +1,9 @@
-.livetable_container {
-  background: green;
-  overflow-y: visible; }
+.live_table_container {
+  height: 75vh;
+  overflow-y: scroll; }
 
-.styles_time_table_wrapper__1-rtp {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  height: 90% !important;
-  overflow-y: scroll;
+.big_calendar {
   width: 80%;
-  margin-left: 10%; }
+  height: 75vh;
+  margin: 0 auto;
+  margin-top: 5vh; }

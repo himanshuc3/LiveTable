@@ -16,7 +16,7 @@ export default class FormModal extends Component {
         this.state = {
             visible: false,
             event: '',
-            day: 'SUNDAY',
+            date: '',
             start: '',
             end: ''
         };
@@ -97,15 +97,14 @@ export default class FormModal extends Component {
                         <div className="form_container">
                             <form className="form" onSubmit={this.handleSubmit} >
                                 <input type="text" name="event" onChange={this.handleChange} placeholder="Event name - Collaborate band!"/>
-                                <select className="day_select" name="day" onChange={this.handleChange}>
-                                    <option value="SUNDAY">Sunday</option>
-                                    <option value="MONDAY">Monday</option>
-                                    <option value="TUESDAY">TUESDAY</option>
-                                    <option value="WEDNESDAY">WEDNESDAY</option>
-                                    <option value="THURSDAY">THURSDAY</option>
-                                    <option value="FRIDAY">FRIDAY</option>
-                                    <option value="SATURDAY">SATURDAY</option>
-                                </select> 
+                                <Cleave 
+                                    placeholder="Date - 03" 
+                                    name="date"
+                                    options={{
+                                        blocks: [2],
+                                        numericOnly: true
+                                    }}
+                                    onChange={this.handleChange}/>
                                 <Cleave 
                                     placeholder="Start time - 06:00" 
                                     name="start"

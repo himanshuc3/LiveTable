@@ -19,22 +19,17 @@ class App extends Component {
 
   constructor(props){
     super(props);
-    let events = {
-      sunday:[
-
-      ],
-      monday: [
-      ],
-      tuesday: [
-      ],
-      wednesday: [],
-      thursday: [],
-      friday: [],
-      saturday: []
-    };
+    let events = [
+    {
+      id: 0,
+      title: 'Today',
+      start: new Date(new Date().setHours(new Date().getHours() - 3)),
+      end: new Date(new Date().setHours(new Date().getHours() + 3)),
+  },
+]
     this.state = {
           events: events,
-          numberOfEvents: 0
+          numberOfEvents: 1
     };
   }
 
@@ -56,12 +51,14 @@ class App extends Component {
   }
 
   handleEventAdd (obj) {
-    let dayAddedTo = {...this.state.events}; //copy of events object state
-    dayAddedTo[obj["day"].toLowerCase()].push({
-      id: this.state.numberOfEvents + 1,
-      name: obj.event,
-      startTime: moment(`2018-02-23T${obj.start.substring(0,2)}:${obj.start.substring(2)}:00`),
-      endTime: moment(`2018-02-23T${obj.end.substring(0,2)}:${obj.end.substring(2)}:00`)
+    let dayAddedTo = [...this.state.events]; //copy of events object state
+    dayAddedTo.push({
+      id: this.state.numberOfEvents,
+      title: obj.event,
+      start: new Date((new Date()).getFullYear(),(new Date()).getMonth(), parseInt(obj.date), parseInt(obj.start.substring(0,2)), parseInt(obj.start.substring(2))),
+      end: new Date((new Date()).getFullYear(),(new Date()).getMonth(), parseInt(obj.date), parseInt(obj.end.substring(0,2)), parseInt(obj.end.substring(2))),
+      // startTime: moment(`2018-02-23T${obj.start.substring(0,2)}:${obj.start.substring(2)}:00`),
+      // endTime: moment(`2018-02-23T${obj.end.substring(0,2)}:${obj.end.substring(2)}:00`)
     });
 
     this.setState({
@@ -110,14 +107,14 @@ class App extends Component {
                 <img src={logout} alt="Logout" />
               </div>
             </header>
-            {/* <FormModal onEventAdd={this.handleEventAdd.bind(this)} /> */}
             <div className="app_content">
               <div className="scheduler_add">
-                <h3>Scheduler</h3>
-                <img src={plus} alt="Add" />
+                <h3>Timetable</h3>
+                {/* <img src={plus} alt="Add" /> */}
+                <FormModal onEventAdd={this.handleEventAdd.bind(this)} />
               </div>
+              <LiveTable events={this.state.events} />
             </div>
-            {/* <LiveTable events={this.state.events} /> */}
           </div>
         </div>
       // </Provider>

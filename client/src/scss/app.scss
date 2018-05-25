@@ -30,6 +30,7 @@
         flex-direction: row;
         justify-content: space-between;
         height: 10vh;
+        align-items: center;
         // min-height: 72px;
     }
 }
@@ -37,13 +38,14 @@
 .header_icons{
     width: 20%; //Fix: 20% not happening
     height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .header_icons img{
     display: inline-block;
     vertical-align: baseline !important;
     margin-left: 20%;
-    margin-top:20px;
     width: 25px;
 }
 
@@ -56,12 +58,14 @@
 .scheduler_add{
     width: 80%;
     // background: red;
-    padding-top: 3%;
+    height: 15vh;
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
+    align-items: flex-end;
 }
 
 .scheduler_add img{
     width: 40px;
+    padding-bottom: 10px;
 }

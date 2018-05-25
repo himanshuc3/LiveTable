@@ -1,22 +1,13 @@
-.livetable_container{
-    background: green;
-    // height: 500px;
-    overflow-y: visible;
-}
-
-
-.styles_time_table_wrapper__1-rtp{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    height: 90% !important;
+.live_table_container{
+    height: 75vh;
+    // border: 1px solid green;
     overflow-y: scroll;
-    width: 80%;
-    margin-left: 10%;
 }
 
-.styles_day_title__1y-BE{
-    // padding: 40px 0;
-    // color: black;
-    // background: white;
+.big_calendar{
+    width: 80%;
+    height: 75vh;
+    margin: 0 auto;
+    margin-top: 5vh;
 }
+
