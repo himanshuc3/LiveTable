@@ -11,6 +11,7 @@ import SideBar from './SideBar';
 import SearchBox from './SearchBox'
 import logout from '../assets/images/logout.svg'
 import notification from '../assets/images/notification.svg'
+import plus from '../assets/images/plus.svg'
 require('../styles/app.css');
 
 
@@ -110,7 +111,13 @@ class App extends Component {
               </div>
             </header>
             {/* <FormModal onEventAdd={this.handleEventAdd.bind(this)} /> */}
-            <LiveTable events={this.state.events} />
+            <div className="app_content">
+              <div className="scheduler_add">
+                <h3>Scheduler</h3>
+                <img src={plus} alt="Add" />
+              </div>
+            </div>
+            {/* <LiveTable events={this.state.events} /> */}
           </div>
         </div>
       // </Provider>
