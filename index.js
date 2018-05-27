@@ -6,16 +6,30 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const Pusher = require('pusher');
 const cors = require('cors');
+const passport = require('passport')
+const cookieSession = require('cookie-session')
+const mongoose = require('mongoose')
+const apiRoute = require('./server/routes/api')
+const keys = require('./server/config/keys')
+require('./server/models/user')
 // ------------------------------------------------------
 // Create the Express app
 // ------------------------------------------------------
 
 const app = express();
 app.use(cors());
+mongoose.connect(keys.mongoURI)
 
 // ------------------------------------------------------
-// Load the middlewares
+// Passport
 // ------------------------------------------------------
+
+// ------------------------------------------------------
+// Routes
+// ------------------------------------------------------
+
+const authRoute = require('./server/routes/authRoutes')
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -26,6 +40,14 @@ const pusher = new Pusher({
     cluster: 'ap2',
     encrypted: true
 });
+app.use(
+    cookieSession({
+        maxAge: 30*24*60*60*1000,
+        keys: [keys.cookieKey]
+    })
+)
+app.use(passport.initialize())
+app.use(passport.session())
 
 
 app.post('/addEvent', (req,res)=>{
@@ -45,6 +67,11 @@ app.post('/people', (req,res)=>{
     pusher.trigger('timetable', 'peopleAdd', username);
     res.send(username);
 });
+
+app.use('/login', authRoute)
+app.use('/api', apiRoute)
+
+
 
 
 if(process.env.NODE_ENV === 'production'){
