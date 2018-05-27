@@ -10,7 +10,7 @@ const passport = require('passport')
 const cookieSession = require('cookie-session')
 const mongoose = require('mongoose')
 const apiRoute = require('./server/routes/api')
-const keys = require('./server/keys')
+const keys = require('./server/config/keys')
 require('./server/models/user')
 // ------------------------------------------------------
 // Create the Express app

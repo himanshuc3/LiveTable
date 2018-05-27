@@ -5,4 +5,8 @@ router.get('/current_user', (req, res) => {
     res.send(JSON.stringify(req.user))
 })
 
+router.get('/current_user', (req, res) => {
+    res.send(JSON.stringify(req.user))
+})
+
 module.exports = router
