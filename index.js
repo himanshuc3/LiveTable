@@ -75,7 +75,7 @@ app.use('/api', apiRoute)
 
 
 if(process.env.NODE_ENV === 'production'){
-    //Serving assets in production from buil directory
+    //Serving assets in production from build directory
     app.use(express.static('client/build'));
 
     //Express will serve up the index.html file
