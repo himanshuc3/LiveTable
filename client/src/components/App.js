@@ -7,6 +7,7 @@ import moment from 'moment';
 import React, { Component } from 'react';
 import FormModal from './FormModal';
 import LiveTable from './LiveTable';
+const keys = require('../../../server/config/keys')
 import SideBar from './SideBar';
 import SearchBox from './SearchBox'
 import logout from '../assets/images/logout.svg'
@@ -34,8 +35,8 @@ class App extends Component {
   }
 
   componentDidMount(){
-    const pusher = new Pusher('bd15491c4e703db76122', {
-      cluster: 'ap2',
+    const pusher = new Pusher(keys.pusherKey, {
+      cluster: keys.pusherCluster,
       encrypted: true
     });
     const channel = pusher.subscribe('timetable');

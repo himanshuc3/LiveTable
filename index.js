@@ -34,10 +34,10 @@ const authRoute = require('./server/routes/authRoutes')
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 const pusher = new Pusher({
-    appId: '519915',
-    key: 'bd15491c4e703db76122',
-    secret: '9988d4fdb3f1da24f86f',
-    cluster: 'ap2',
+    appId: keys.pusherAppID,
+    key: keys.pusherKey,
+    secret: keys.pusherSecret,
+    cluster: keys.pusherCluster,
     encrypted: true
 });
 app.use(
