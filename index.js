@@ -13,7 +13,7 @@ const apiRoute = require('./server/routes/api')
 const keys = require('./server/config/keys')
 require('./server/models/user')
 // ------------------------------------------------------
-// Create the Express app
+// Create the Express app  and config
 // ------------------------------------------------------
 
 const app = express();
