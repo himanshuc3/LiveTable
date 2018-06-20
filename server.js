@@ -2,22 +2,22 @@
 // ------------------------------------------------------
 // Import Node Modules...
 // ------------------------------------------------------
-const express = require('express');
-const bodyParser = require('body-parser');
-const Pusher = require('pusher');
-const cors = require('cors');
+const express = require('express')
+const bodyParser = require('body-parser')
+const Pusher = require('pusher')
+const cors = require('cors')
 const passport = require('passport')
 const cookieSession = require('cookie-session')
 const mongoose = require('mongoose')
 const apiRoute = require('./server/routes/api')
-const keys = require('./server/config/keys')
+const keys = require('./client/src/config/keys')
 require('./server/models/user')
 // ------------------------------------------------------
 // Create the Express app  and config
 // ------------------------------------------------------
 
-const app = express();
-app.use(cors());
+const app = express()
+app.use(cors())
 mongoose.connect(keys.mongoURI)
 
 // ------------------------------------------------------

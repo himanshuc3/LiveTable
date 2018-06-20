@@ -7,13 +7,13 @@ import moment from 'moment';
 import React, { Component } from 'react';
 import FormModal from './FormModal';
 import LiveTable from './LiveTable';
-const keys = require('../../../server/config/keys')
 import SideBar from './SideBar';
 import SearchBox from './SearchBox'
 import logout from '../assets/images/logout.svg'
 import notification from '../assets/images/notification.svg'
 import plus from '../assets/images/plus.svg'
 require('../styles/app.css');
+const keys = require('../config/keys')
 
 
 class App extends Component {
