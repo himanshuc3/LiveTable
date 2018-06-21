@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import RightCarousel from './RightCarousel';
 import InformationModal from './InformationModal';
+import { Link } from 'react-router'
 import RoomsModal from './RoomsModal'
 import logo from '../assets/images/logo2.png'
 // import logo from '../assets/images/logo.svg';
@@ -19,7 +20,6 @@ export default class LandingPage extends Component {
                 <div className="left_container">
                     <header className="nav_container">
                         <h4 className="app_name">
-                        {/* Livetable. */}
                         <img src={logo} className="img_logo"/>
                         <InformationModal />
                         </h4>
