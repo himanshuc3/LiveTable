@@ -11,7 +11,9 @@ const cookieSession = require('cookie-session')
 const mongoose = require('mongoose')
 const apiRoute = require('./server/routes/api')
 const keys = require('./client/src/config/keys')
+const authRoute = require('./server/routes/authRoutes')
 require('./server/models/user')
+
 // ------------------------------------------------------
 // Create the Express app  and config
 // ------------------------------------------------------
@@ -28,8 +30,6 @@ mongoose.connect(keys.mongoURI)
 // Routes
 // ------------------------------------------------------
 
-const authRoute = require('./server/routes/authRoutes')
-
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -42,7 +42,7 @@ const pusher = new Pusher({
 });
 app.use(
     cookieSession({
-        maxAge: 30*24*60*60*1000,
+        maxAge: 30*24*60*60*1000, //30 days
         keys: [keys.cookieKey]
     })
 )
@@ -67,6 +67,10 @@ app.post('/people', (req,res)=>{
     pusher.trigger('timetable', 'peopleAdd', username);
     res.send(username);
 });
+
+app.get('/', (req,res)=>{
+    res.send(json)
+})
 
 app.use('/login', authRoute)
 app.use('/api', apiRoute)

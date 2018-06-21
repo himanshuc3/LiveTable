@@ -1,7 +1,7 @@
 const passport = require('passport')
 const GoogleStrategy = require('passport-google-oauth20')
 const mongoose = require('mongoose')
-const keys = require('../config/keys')
+const keys = require('../../client/src/config/keys')
 const User = mongoose.model('users')
 
 passport.serializeUser((user, done) =>{
@@ -26,7 +26,11 @@ passport.use(new GoogleStrategy({
                 done(null, existingUser)
             }else{
                 //Add user
-                new User({googleID: profile.id})
+                new User({
+                    googleID: profile.id,
+                    fullName: profile.displayName,
+                    email: profile.emails[0].value
+                    })
                     .save()
                     .then(user => done(null, user))
             }

@@ -141,7 +141,7 @@
 .login_signup_buttons {
   display: flex;
   flex-direction: row-reverse;
-  margin-top: 1vh; }
+  margin-top: 2vh; }
 
 .login_button,
 .signup_button {
@@ -153,8 +153,8 @@
   border-radius: 5px; }
 
 .login_button {
-  background: black;
-  color: #FF6347;
+  background: transparent;
+  color: black;
   border: 2px solid black;
   margin-right: 20px; }
 

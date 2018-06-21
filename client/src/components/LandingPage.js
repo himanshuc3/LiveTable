@@ -52,7 +52,7 @@ export default class LandingPage extends Component {
                 </div>
                 <div className="right_container">
                     <div className="login_signup_buttons">
-                        <button className="signup_button">Sign up</button>
+                        {/* <button className="signup_button">Sign up</button> */}
                         <button className="login_button">Login</button>
                     </div>
                     <RightCarousel />
