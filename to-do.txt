@@ -1,0 +1,6 @@
+Features to be implemented:
+    - Livetable logo(better)
+    - Login via Oauth
+        - Backend of Oauth
+        - Modal for Oauth
+        
