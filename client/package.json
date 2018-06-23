@@ -22,9 +22,17 @@
     "react-search-box": "0.0.10",
     "react-timetable-events": "1.0.1",
     "redux": "4.0.0",
+    "redux-thunk": "2.3.0",
     "rodal": "1.6.3"
   },
-  "proxy": "http://localhost:5000/",
+  "proxy": {
+    "/auth/google": {
+      "target": "http://localhost:5000"
+    },
+    "/api/*": {
+      "target": "http://localhost:5000"
+    }
+  },
   "scripts": {
     "build-css": "node-sass-chokidar src/scss/ -o src/styles/",
     "watch-css": "npm run build-css && node-sass-chokidar src/scss/ -o src/styles/ --watch --recursive",

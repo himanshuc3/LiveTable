@@ -2,6 +2,7 @@ const passport = require('passport')
 const GoogleStrategy = require('passport-google-oauth20')
 const mongoose = require('mongoose')
 const keys = require('../../client/src/config/keys')
+require('../models/user')
 const User = mongoose.model('users')
 
 passport.serializeUser((user, done) =>{
@@ -13,26 +14,27 @@ passport.deserializeUser((id, done) => {
         .then(user => done(null, user))
 })
 
+//Refactored promises ( .then().catch() syntax)
+//with async and await.
+
 passport.use(new GoogleStrategy({
     clientID: keys.googleClientID,
     clientSecret: keys.googleClientSecret,
     callbackURL: '/login/auth/google/callback',
     proxy: true
-},(accessToken, refreshToken, profile, done) => {
-    User.findOne({googleID: profile.id})
-        .then((existingUser) =>{
-            if(existingUser){
-                //User already exists
-                done(null, existingUser)
-            }else{
-                //Add user
-                new User({
-                    googleID: profile.id,
-                    fullName: profile.displayName,
-                    email: profile.emails[0].value
-                    })
-                    .save()
-                    .then(user => done(null, user))
-            }
+}, async (accessToken, refreshToken, profile, done) => {
+    const existingUser = await User.findOne({googleID: profile.id})
+
+    if(existingUser){
+        //User already exists
+        done(null, existingUser)
+    }
+    //Add user
+    const user = await new User({
+        googleID: profile.id,
+        fullName: profile.displayName,
+        email: profile.emails[0].value
         })
+        .save()
+    done(null, user)
 }))
