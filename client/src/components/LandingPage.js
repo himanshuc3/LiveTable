@@ -4,13 +4,26 @@ import RightCarousel from './RightCarousel';
 import InformationModal from './InformationModal';
 import { Link } from 'react-router'
 import RoomsModal from './RoomsModal'
+import { connect } from 'react-redux'
 import logo from '../assets/images/logo2.png'
 // import logo from '../assets/images/logo.svg';
 // import githubLogo from '../assets/images/github_logo.svg';
 // import pusherLogo from '../assets/images/pusher_logo.svg';
+import LoginModal from './LoginModal'
 require('../styles/landing_page.css');
 
-export default class LandingPage extends Component {
+class LandingPage extends Component {
+
+    renderLoginButton(){
+        switch(this.props.auth){
+            case null:
+                return
+            case false:
+                return 'Login'
+            default:
+                return 'Logout'
+        }
+    }
 
 
     render() {
@@ -63,3 +76,9 @@ export default class LandingPage extends Component {
         );
     }
 }
+
+function mapStateToProps(state){
+    return {auth: state.auth}
+}
+
+export default connect(mapStateToProps)(LandingPage)

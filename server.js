@@ -9,10 +9,11 @@ const cors = require('cors')
 const passport = require('passport')
 const cookieSession = require('cookie-session')
 const mongoose = require('mongoose')
-const apiRoute = require('./server/routes/api')
+const apiRoute = require('./server/routes/apiRoutes')
 const keys = require('./client/src/config/keys')
 const authRoute = require('./server/routes/authRoutes')
-require('./server/models/user')
+require('./server/models/users')
+require('./server/services/passport')
 
 // ------------------------------------------------------
 // Create the Express app  and config
