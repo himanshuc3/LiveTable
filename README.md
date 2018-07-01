@@ -11,4 +11,4 @@
   
 # Tech Stack
 
-### React, Express.
+### React, Express and other libraries.
