@@ -14,4 +14,4 @@
 # Tech Stack
 
 ### React, Express.
-### Redux, cors, etc.
+### Redux, cors, redux-thunk etc.
