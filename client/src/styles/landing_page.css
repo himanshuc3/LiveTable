@@ -27,7 +27,7 @@
   box-sizing: border-box; }
 
 .img_logo {
-  width: 150px; }
+  width: 120px; }
 
 .landing_page {
   background-color: white;
@@ -49,7 +49,7 @@
 .app_name {
   margin-top: 20px;
   padding-top: 3%;
-  padding-left: 5%; }
+  padding-left: 10%; }
 
 .content {
   /* background: tan; */

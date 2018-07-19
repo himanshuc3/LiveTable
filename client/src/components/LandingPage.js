@@ -1,12 +1,10 @@
 
 import React, { Component } from 'react';
 import RightCarousel from './RightCarousel';
-import InformationModal from './InformationModal';
 import { Link } from 'react-router'
 import RoomsModal from './RoomsModal'
 import { connect } from 'react-redux'
-import logo from '../assets/images/logo2.png'
-// import logo from '../assets/images/logo.svg';
+import logo from '../assets/images/logo4.png'
 // import githubLogo from '../assets/images/github_logo.svg';
 // import pusherLogo from '../assets/images/pusher_logo.svg';
 import LoginModal from './LoginModal'
@@ -34,7 +32,6 @@ class LandingPage extends Component {
                     <header className="nav_container">
                         <h4 className="app_name">
                         <img src={logo} className="img_logo"/>
-                        <InformationModal />
                         </h4>
                     </header>
                     <div className="content">
@@ -78,7 +75,9 @@ class LandingPage extends Component {
 }
 
 function mapStateToProps(state){
-    return {auth: state.auth}
+    return {
+        auth: state.auth
+    }
 }
 
 export default connect(mapStateToProps)(LandingPage)

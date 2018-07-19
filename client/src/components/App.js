@@ -30,7 +30,8 @@ class App extends Component {
 ]
     this.state = {
           events: events,
-          numberOfEvents: 1
+          numberOfEvents: 1,
+          component: 'Livetable'
     };
   }
 
@@ -49,6 +50,12 @@ class App extends Component {
     channel.bind('blockEvent', data =>{
       this.blockEvent(data);
     });
+  }
+
+  changeComponent(componentName){
+    this.setState({
+      component: componentName
+    })
   }
 
   handleEventAdd (obj) {
