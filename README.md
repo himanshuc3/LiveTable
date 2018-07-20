@@ -1,6 +1,7 @@
 # LiveTable
 
 ### Realtime Timetable scheduling. Could be used by freelancers.
+## Deployed on: https://mysterious-beach-92009.herokuapp.com/
 
 # How to Contribute
 
