@@ -3,4 +3,4 @@ Features to be implemented:
         - Backend of Oauth
         - Modal for Oauth
    - settings component
-        
+   - proxy
