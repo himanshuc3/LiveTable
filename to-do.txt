@@ -4,3 +4,4 @@ Features to be implemented:
         - Modal for Oauth
    - settings component
    - proxy settings
+   - Search improve.
