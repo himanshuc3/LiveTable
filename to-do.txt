@@ -5,3 +5,4 @@ Features to be implemented:
    - settings component
    - proxy settings
    - Search improve.
+   - Redis integration.
