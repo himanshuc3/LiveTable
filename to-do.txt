@@ -2,7 +2,7 @@ Features to be implemented:
     - Login via Oauth
         - Backend of Oauth
         - Modal for Oauth
-   - settings component
-   - proxy settings
+   - settings component.
+   - proxy settings.
    - Search improve.
    - Redis integration.
