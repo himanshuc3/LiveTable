@@ -6,3 +6,4 @@ Features to be implemented:
    - proxy settings.
    - Search improve.
    - Redis integration.
+   - Adding redux.
