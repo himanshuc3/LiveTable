@@ -7,3 +7,4 @@ Features to be implemented:
    - Search improve.
    - Redis integration.
    - Adding redux.
+   - Adding redux middleware - thunk.
