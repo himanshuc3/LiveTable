@@ -8,3 +8,4 @@ Features to be implemented:
    - Redis integration.
    - Adding redux.
    - Adding redux middleware - thunk.
+   - mongo database.
