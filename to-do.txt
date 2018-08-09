@@ -10,3 +10,4 @@ Features to be implemented:
    - Adding redux middleware - thunk.
    - mongo database.
    - Token based auth.
+   - Adding flow.
