@@ -11,3 +11,4 @@ Features to be implemented:
    - mongo database.
    - Token based auth.
    - Adding flow.
+   - Adding responsiveness.
