@@ -12,3 +12,4 @@ Features to be implemented:
    - Token based auth.
    - Adding flow.
    - Adding responsiveness.
+   - Learn and apply dev. tools knowledge.
