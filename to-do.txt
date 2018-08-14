@@ -13,3 +13,4 @@ Features to be implemented:
    - Adding flow.
    - Adding responsiveness.
    - Learn and apply dev. tools knowledge.
+   - Ask udacity mentor for improvements.
