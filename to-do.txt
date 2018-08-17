@@ -14,4 +14,4 @@ Features to be implemented:
    - Adding responsiveness.
    - Learn and apply dev. tools knowledge.
    - Ask udacity mentor for improvements.
-   - Add templating for pull requests.
+   - Adding template for pull requests.
