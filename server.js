@@ -2,7 +2,7 @@
 // ------------------------------------------------------
 // Import Node Modules...
 // ------------------------------------------------------
-const express = require('express')
+const express = require('express');
 const bodyParser = require('body-parser')
 const Pusher = require('pusher')
 const cors = require('cors')
