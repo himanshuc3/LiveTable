@@ -15,3 +15,4 @@ Features to be implemented:
    - Learn and apply dev. tools knowledge.
    - Ask udacity mentor for improvements.
    - Adding template for pull requests.
+   - parsing data.
