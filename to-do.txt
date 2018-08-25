@@ -16,3 +16,4 @@ Features to be implemented:
    - Ask udacity mentor for improvements.
    - Adding template for pull requests.
    - parsing data.
+   - new design.
