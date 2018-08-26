@@ -17,3 +17,4 @@ Features to be implemented:
    - Adding template for pull requests.
    - parsing data.
    - new design.
+   - More accessibility.
