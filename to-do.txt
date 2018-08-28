@@ -6,7 +6,7 @@ Features to be implemented:
    - proxy settings.
    - Search improve.
    - Redis integration.
-   - Adding redux.
+   - Adding redux for state.
    - Adding redux middleware - thunk.
    - mongo database.
    - Token based auth.
