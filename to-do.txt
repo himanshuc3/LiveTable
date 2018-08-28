@@ -18,3 +18,4 @@ Features to be implemented:
    - parsing data.
    - new design.
    - More accessibility.
+   - Adding virtual machine.
