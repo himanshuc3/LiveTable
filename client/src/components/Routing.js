@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 import * as actions from '../store/actions'
 import App from './App'
 import LandingPage from './LandingPage'
+import { Provider } from 'react-redux'
+import { ConfigureStore } from '../redux/store/configureStore'
 
 class Routing extends Component{
 
