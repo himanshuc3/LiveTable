@@ -1,8 +1,22 @@
 Features to be implemented:
-    - Login via Oauth
-        - Backend of Oauth
-        - Modal for Oauth
+    - Login via Oauth.
+        - Backend of Oauth.
+        - Modal for Oauth.
    - settings component.
    - proxy settings.
    - Search improve.
    - Redis integration.
+   - Adding redux for state.
+   - Adding redux middleware - thunk.
+   - mongo database.
+   - Token based auth.
+   - Adding flow.
+   - Adding responsiveness.
+   - Learn and apply dev. tools knowledge.
+   - Ask udacity mentor for improvements.
+   - Adding template for pull requests.
+   - parsing data.
+   - new design.
+   - More accessibility.
+   - Setting up Docker.
+   - Adding sql/mongo.
